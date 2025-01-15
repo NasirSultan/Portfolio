@@ -1,0 +1,181 @@
+/* Ensure smooth scrolling for navigation links */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom styles */
+body {
+    font-family: Arial, sans-serif;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+}
+
+.text-blue-500 {
+    color: #4299e1;
+}
+
+.text-animation {
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.hover-scale:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+.rounded-img {
+    border-radius: 50%;
+}
+
+/* AOS animations */
+[data-aos="zoom-in"] {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: transform 1s ease, opacity 1s ease;
+}
+
+[data-aos="zoom-in"].aos-animate {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Add hover effect on skill cards */
+.skill-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+}
+
+.skill-card i {
+    transition: transform 0.3s ease;
+}
+
+.skill-card:hover i {
+    transform: rotate(10deg);
+}
+
+
+
+/* General Styles */
+body {
+    background-color: #121212 !important;
+    color: #fff !important;
+    font-family: "Centra", sans-serif !important;
+}
+
+/* Skill Cards Styling */
+.skill-card {
+    background-color: #222;
+    padding: 2rem;
+    border-radius: 15px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+}
+
+.skill-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Card Hover Animation */
+.card {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Project Images */
+.card-img-top {
+    transition: transform 0.4s ease-in-out;
+    object-fit: cover;
+    height: 200px;
+}
+
+.card:hover .card-img-top {
+    transform: scale(1.1);
+}
+
+/* Hover Effects on Skill Icons */
+.skill-card i {
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.skill-card:hover i {
+    transform: translateY(-10px);
+    color: #fff;
+}
+
+/* Button Styling */
+.btn-primary {
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0a5cd2;
+    border-color: #0a5cd2;
+}
+
+/* AOS (Animate On Scroll) Effect */
+.aos-init {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.aos-animate {
+    opacity: 1;
+}
+
+
+.card {
+    cursor: pointer;
+}
+/* Navbar Image Styling */
+.navbar-img {
+    width: 25px;
+    height: 25px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    margin-left: 8px;
+}
+
+.navbar-img:hover {
+    transform: scale(1.1);
+}
+
+/* Social Icon Styling */
+.social-icon i {
+    color: #fff;
+    font-size: 20px;
+    transition: color 0.3s ease-in-out;
+}
+
+.social-icon:hover i {
+    color: #007bff; /* Change color on hover */
+}
+
+/* Optional: You can add additional styles for responsiveness */
+@media (max-width: 767px) {
+    .navbar-img {
+        width: 30px;
+        height: 30px;
+    }
+}
