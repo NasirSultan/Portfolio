@@ -6,35 +6,71 @@ html {
 /* Custom styles */
 body {
     font-family: Arial, sans-serif;
+    background-color: #121212 !important;
+    color: #fff !important;
+}
+
+/* Navbar Styles */
+.navbar {
+    font-family: 'Arial', sans-serif;
+    font-size: 0.75rem; /* Smaller font size for navbar */
+    letter-spacing: 0.5px;
 }
 
 .navbar-brand {
-    font-size: 1.5rem;
+    font-size: 1.25rem; /* Reduced size for navbar brand */
+    font-weight: bold;
+    color: #f8f9fa;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
 }
 
-.text-blue-500 {
-    color: #4299e1;
+.navbar-brand:hover {
+    color: #ffc107; /* Yellow color on hover */
 }
 
-.text-animation {
-    animation: fadeIn 2s ease-in-out;
+/* Nav Links */
+.nav-item.nav-link {
+    color: #f8f9fa;
+    margin-right: 15px;
+    font-size: 0.75rem; /* Smaller font size for links */
+    text-transform: uppercase;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
-@keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
+.nav-item.nav-link:hover {
+    color: #ffc107; /* Yellow color on hover */
+    transform: scale(1.1); /* Slight zoom-in effect */
 }
 
-.hover-scale:hover {
-    transform: scale(1.05);
-    transition: transform 0.3s ease;
+/* Navbar Image Styling */
+.navbar-img {
+    width: 25px;
+    height: 25px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, border-color 0.3s ease;
+    margin-left: 8px;
 }
 
-.rounded-img {
-    border-radius: 50%;
+.navbar-img:hover {
+    transform: scale(1.1);
+    border-color: #ffc107; /* Yellow border on hover */
 }
 
-/* AOS animations */
+/* Social Icon Styling */
+.social-icon i {
+    color: #fff;
+    font-size: 1.2rem; /* Adjusted icon size */
+    transition: color 0.3s ease-in-out, transform 0.3s ease;
+}
+
+.social-icon:hover i {
+    color: #007bff; /* Change color on hover */
+    transform: scale(1.2); /* Slight zoom-in effect */
+}
+
+/* AOS Animations */
 [data-aos="zoom-in"] {
     opacity: 0;
     transform: scale(0.9);
@@ -46,31 +82,10 @@ body {
     transform: scale(1);
 }
 
-/* Add hover effect on skill cards */
-.skill-card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.skill-card:hover {
-    transform: scale(1.1);
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
-}
-
-.skill-card i {
+/* General Hover Effects */
+.hover-scale:hover {
+    transform: scale(1.05);
     transition: transform 0.3s ease;
-}
-
-.skill-card:hover i {
-    transform: rotate(10deg);
-}
-
-
-
-/* General Styles */
-body {
-    background-color: #121212 !important;
-    color: #fff !important;
-    font-family: "Centra", sans-serif !important;
 }
 
 /* Skill Cards Styling */
@@ -90,28 +105,6 @@ body {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
 }
 
-/* Card Hover Animation */
-.card {
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
-}
-
-.card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
-}
-
-/* Project Images */
-.card-img-top {
-    transition: transform 0.4s ease-in-out;
-    object-fit: cover;
-    height: 200px;
-}
-
-.card:hover .card-img-top {
-    transform: scale(1.1);
-}
-
-/* Hover Effects on Skill Icons */
 .skill-card i {
     transition: transform 0.3s ease, color 0.3s ease;
 }
@@ -133,112 +126,43 @@ body {
     border-color: #0a5cd2;
 }
 
-/* AOS (Animate On Scroll) Effect */
-.aos-init {
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-}
-
-.aos-animate {
-    opacity: 1;
-}
-
-
+/* Card Hover Animation */
 .card {
     cursor: pointer;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
 }
-/* Navbar Image Styling */
-.navbar-img {
-    width: 25px;
-    height: 25px;
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Project Images */
+.card-img-top {
+    transition: transform 0.4s ease-in-out;
     object-fit: cover;
-    cursor: pointer;
-    transition: transform 0.3s ease-in-out;
-    margin-left: 8px;
+    height: 200px;
 }
 
-.navbar-img:hover {
+.card:hover .card-img-top {
     transform: scale(1.1);
-}
-
-/* Social Icon Styling */
-.social-icon i {
-    color: #fff;
-    font-size: 20px;
-    transition: color 0.3s ease-in-out;
-}
-
-.social-icon:hover i {
-    color: #007bff; /* Change color on hover */
-}
-
-/* Optional: You can add additional styles for responsiveness */
-@media (max-width: 767px) {
-    .navbar-img {
-        width: 30px;
-        height: 30px;
-    }
-}
-
-
-/* Navbar Styles */
-.navbar {
-    font-family: 'Arial', sans-serif;
-    font-size: 0.875rem; /* Smaller font size for navbar */
-    letter-spacing: 0.5px;
-}
-
-.navbar-brand {
-    font-size: 1.25rem; /* Reduced size for navbar brand */
-    font-weight: bold;
-    color: #f8f9fa;
-    text-transform: uppercase;
-    transition: color 0.3s ease;
-}
-
-.navbar-brand:hover {
-    color: #ffc107; /* Yellow color on hover */
-}
-
-/* Nav Links */
-.nav-item.nav-link {
-    color: #f8f9fa;
-    margin-right: 15px;
-    font-size: 0.875rem; /* Smaller font size for links */
-    text-transform: uppercase;
-    transition: color 0.3s ease, transform 0.3s ease;
-}
-
-.nav-item.nav-link:hover {
-    color: #ffc107; /* Yellow color on hover */
-    transform: scale(1.1); /* Slight zoom-in effect */
-}
-
-/* Social Icons */
-.social-icon {
-    color: #f8f9fa;
-    font-size: 1.2rem; /* Adjusted icon size */
-    transition: color 0.3s ease, transform 0.3s ease;
-}
-
-.social-icon:hover {
-    color: #ffc107; /* Yellow color on hover */
-    transform: scale(1.2); /* Slight zoom-in effect */
 }
 
 /* Profile Image */
 .navbar-img {
-    width: 40px;
-    height: 40px;
-    margin-left: 15px;
-    border: 2px solid #f8f9fa;
-    transition: border-color 0.3s ease, transform 0.3s ease;
+    width: 20px; /* Adjust size for larger screens */
+    height: 20px;
+    object-fit: cover;
 }
 
-.navbar-img:hover {
-    border-color: #ffc107; /* Yellow border on hover */
-    transform: rotate(360deg) scale(1.1); /* Rotate and zoom effect */
-    transition: transform 0.6s ease, border-color 0.3s ease;
+/* Optional: Add some margin for spacing */
+.social-icon {
+    font-size: 1.8rem;
+    color: white;
+}
+
+.social-icon:hover {
+    color: #007bff;
 }
 
 /* Responsive Design Tweaks */
@@ -246,15 +170,39 @@ body {
     .nav-item.nav-link {
         margin-right: 0;
         margin-bottom: 10px;
-        font-size: 0.875rem; /* Ensuring smaller size for smaller screens */
+        font-size: 0.75rem; /* Ensuring smaller size for smaller screens */
     }
 
     .navbar-img {
-        margin-left: 0;
+        margin-left: 3px;
         margin-top: 10px;
     }
 
     .social-icon {
         font-size: 1rem; /* Adjust icon size for smaller screens */
+    }
+}
+
+@media (max-width: 991px) {
+    .navbar-nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-toggler {
+        display: block;
+    }
+
+    .navbar-collapse {
+        width: 100%;
+    }
+
+    .social-icon {
+        font-size: 1.5rem;
+    }
+
+    .navbar-img {
+        width: 40px;  /* Adjust size on smaller screens */
+        height: 40px;
     }
 }
