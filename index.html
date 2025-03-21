@@ -623,124 +623,36 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     </style>
 
-    <!-- Contact Section -->
-    <div id="contact" class="container py-5 mt-5">
-        <h2 class=" py-4 mt-4" class="aos-init aos-animate" data-aos="zoom-in" data-aos-duration="1500">Contact Me →
-        </h2><br><br>
-        <div class="row">
-            <!-- Left Column - Contact Form -->
-            <div class="col-md-6 aos-init aos-animate equal-col" data-aos="fade-right" data-aos-duration="1500">
-                <div class="contact-box border p-4 h-100">
-                    <h4 class="text-center">Get in Touch</h4>
-                    <p class="text-center">
-                        Feel free to reach out for any inquiries, collaborations, or just to say hi!
-                    </p>
-                    <form action="#" method="POST">
-                        <div class="mb-3">
-                            <label for="name" class="form-label">Name</label>
-                            <input type="text" class="form-control" id="name" name="name" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="email" class="form-label">Email address</label>
-                            <input type="email" class="form-control" id="email" name="email" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="message" class="form-label">Message</label>
-                            <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
-                        </div>
-                        <div class="d-grid gap-2">
-                            <button type="submit" class="btn btn-primary">Send Message</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-
-            <!-- Right Column - Contact Information -->
-            <div class="col-md-6 aos-init aos-animate equal-col" data-aos="fade-left" data-aos-duration="1500">
-                <div class="contact-box border p-4 h-100">
-                    <h4 class="text-center">Contact Information</h4>
-                    <p class="text-center">
-                        You can also contact me through the following methods:
-                    </p>
-                    <ul class="list-unstyled">
-                        <li class="mb-3">
-                            <i class="fa-solid fa-phone-alt"></i>
-                            <a href="https://wa.me/923001234567" class="text-decoration-none">+92 3411731277</a>
-                        </li>
-                        <li class="mb-3">
-                            <i class="fa-solid fa-envelope"></i>
-                            <a href="mailto:nasir.sultan@example.com"
-                                class="text-decoration-none">Rainasirsultan123@gmail.com</a>
-                        </li>
-                        <li class="mb-3">
-                            <i class="fa-solid fa-map-marker-alt"></i> Lahore, Pakistan
-                        </li>
-                    </ul>
-                </div>
+<div id="contact" class="container py-5 mt-5">
+    <h2 class="section-title aos-init aos-animate text-start" data-aos="zoom-in" data-aos-duration="1500">
+        Contact Me →
+    </h2>
+    <div class="row justify-content-center">
+        <!-- Right Column - Contact Information -->
+        <div class="col-lg-6 col-md-10 aos-init aos-animate" data-aos="fade-left" data-aos-duration="1500">
+            <div class="contact-box shadow-lg p-5 h-100">
+                <h4 class="text-center">Contact Information</h4>
+                <p class="text-center">
+                    You can also contact me through the following methods:
+                </p>
+                <ul class="list-unstyled text-center">
+                    <li class="mb-4">
+                        <i class="fa-solid fa-phone-alt me-2"></i>
+                        <a href="https://wa.me/923411731277" class="text-decoration-none" target="_blank">
+                            +92 341 1731277
+                        </a>
+                    </li>
+                    <li class="mb-4">
+                        <i class="fa-solid fa-envelope me-2"></i>
+                        <a href="mailto:Rainasirsultan123@gmail.com" class="text-decoration-none">
+                            Rainasirsultan123@gmail.com
+                        </a>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
-
-    <!-- Custom CSS -->
-    <style>
-        .contact-box {
-            border: 2px solid #ddd;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            display: flex;
-            flex-direction: column;
-            height: 100%;
-        }
-
-        .contact-box .form-control {
-            border-radius: 6px;
-            padding: 10px;
-        }
-
-        .contact-box .btn-primary {
-            border-radius: 6px;
-        }
-
-        .contact-box h4 {
-            font-weight: bold;
-            margin-bottom: 20px;
-        }
-
-        .contact-box p {
-            font-size: 1rem;
-            margin-bottom: 20px;
-        }
-
-        .contact-box ul li {
-            font-size: 1rem;
-        }
-
-        .contact-box ul li i {
-            margin-right: 10px;
-        }
-
-        /* Make columns equal height */
-        .equal-col {
-            display: flex;
-            align-items: stretch;
-        }
-
-        /* Responsive adjustments */
-        @media (max-width: 767px) {
-            .contact-box {
-                padding: 20px;
-            }
-        }
-
-        .contact-box a {
-            color: inherit;
-            text-decoration: none;
-        }
-
-        .contact-box a:hover {
-            text-decoration: underline;
-        }
-    </style>
+</div>
 
 
     <!-- Footer Section -->

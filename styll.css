@@ -583,3 +583,110 @@ body {
         padding: 10px 18px;
     }
 }
+-----------------------------------
+/* 1. Sidebar Header on the Left */
+.header-sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 220px; /* Adjust width as needed */
+    height: 100vh;
+    background: #1e1e2d; /* Dark sidebar */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+    box-shadow: 4px 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.header-sidebar h1 {
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.header-sidebar nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.header-sidebar nav ul li {
+    margin-bottom: 15px;
+}
+
+.header-sidebar nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+    transition: color 0.3s ease-in-out;
+}
+
+.header-sidebar nav ul li a:hover {
+    color: #00aaff;
+}
+
+/* 2. Adjust Main Content to Avoid Overlap */
+.main-content {
+    margin-left: 240px; /* Should be slightly larger than sidebar width */
+    padding: 20px;
+}
+
+/* 3. Light Dark Background for Cards */
+.card {
+    background: #2a2a3d; /* Light dark color */
+    color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* 4. Adjust Contact Box Styling */
+.contact-box {
+    background: #2a2a3d; /* Light dark theme */
+    border: none;
+    padding: 20px;
+    border-radius: 10px;
+    color: #ddd;
+}
+
+.contact-box .form-control {
+    background: #1e1e2d;
+    color: #fff;
+    border: 1px solid #444;
+}
+
+.contact-box .form-control:focus {
+    border-color: #00aaff;
+    box-shadow: 0 0 8px rgba(0, 170, 255, 0.5);
+}
+
+/* 5. Responsive Design for Sidebar */
+@media (max-width: 768px) {
+    .header-sidebar {
+        width: 180px;
+    }
+    
+    .main-content {
+        margin-left: 200px;
+    }
+}
+
+@media (max-width: 576px) {
+    .header-sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        padding: 10px;
+    }
+
+    .main-content {
+        margin-left: 0;
+    }
+}
