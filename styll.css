@@ -748,7 +748,7 @@ body {
 }
 
 /* Apply styles for screens 375px and below */
-@media (max-width: 375px) {
+@media (max-width: 450px) {
     #profile-pic {
         margin-bottom: 10px;
     }
