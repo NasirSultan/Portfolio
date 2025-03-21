@@ -460,7 +460,7 @@ body {
     font-weight: 500;
    
     line-height: 1.6;
-    background: linear-gradient(to right, #aca8a8, #b3aaa4, #ffffff);
+    background: linear-gradient(to right, #ffffff, #5e5b59, #3533ad);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
