@@ -16,28 +16,29 @@
 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 
 <script>
-    document.addEventListener("DOMContentLoaded", function () {
-        // ✅ Initialize AOS animations after DOM is ready
-        AOS.init();
+  
     
-        // ✅ Check if #typing-text exists before modifying it
+  document.addEventListener("DOMContentLoaded", () => {
+    setTimeout(() => {
         const typingElement = document.getElementById("typing-text");
         if (typingElement) {
-            typingElement.innerText = ""; // Clear any placeholder text
-    
-            setTimeout(() => {
-                new Typed("#typing-text", {
-                    strings: ["Your Vision, My Code – Transforming Ideas into Reality"],
-                    typeSpeed: 100,  // ⏳ Slower typing speed
-                    backSpeed: 50,   // ⏪ Slow down backspacing
-                    startDelay: 500, // ⏳ Short delay before starting
-                    backDelay: 2000, // ⏳ Wait before erasing (if loop enabled)
-                    showCursor: false, // ❌ Remove blinking cursor (|)
-                    loop: false // ❌ Disable looping
-                });
-            }, 1000); // Delay to allow AOS animation to complete
+            typingElement.classList.add("typed-fade-in"); // Add fade-in effect
+            new Typed("#typing-text", {
+                strings: [
+                    "Welcome to My Portfolio",
+                    "Your Vision, My Code – Transforming Ideas into Reality"
+                ],
+                typeSpeed: 80,  // Balanced typing speed
+                backSpeed: 40,   // Smooth backspacing
+                startDelay: 1000, // Start typing after 1s
+                backDelay: 2000,  // Pause before erasing
+                showCursor: true, // Show blinking cursor
+                loop: false // 🔄 Restart automatically after completion
+            });
         }
-    });
+    }, 1500); // Start after 1.5s (allows AOS animation to complete)
+});
+
 
     document.addEventListener("DOMContentLoaded", function () {
     // Smooth Scroll Effect

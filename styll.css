@@ -346,6 +346,8 @@ body {
     border-radius: 50%;
 }
 
+
+
 /* 📌 Adjust Navbar Image & Icons */
 .navbar .d-flex {
     gap: 15px; /* Adds spacing between icons and profile picture */
@@ -367,8 +369,8 @@ body {
     }
 
     .navbar-img {
-        width: 45px;  /* Increased size for mobile */
-        height: 45px;
+        width: 40px;  /* Increased size for mobile */
+        height: 40px;
     }
 }
 
@@ -388,8 +390,8 @@ body {
 
 /* 🖼️ Navbar Profile Image */
 .navbar-img {
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     object-fit: cover;
     border-radius: 50%;
     cursor: pointer; /* Indicates it's clickable */
