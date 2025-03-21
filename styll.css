@@ -692,3 +692,64 @@ body {
         margin-left: 0;
     }
 }
+-------------------------
+
+/* Center content and maintain row layout */
+.social-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px; /* Space between icons and image */
+    padding: 10px;
+    flex-wrap: nowrap; /* Prevent wrapping */
+}
+
+/* Equal size for icons */
+.social-icon {
+    font-size: 25px; /* Adjust size */
+    color: #333; /* Neutral color */
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.2);
+    color: #0077b5; /* Blue for LinkedIn */
+}
+
+/* Profile Image - Same size as icons */
+#profile-pic {
+    width: 25px;
+    height: 25px;
+    object-fit: cover;
+    border: 3px solid #ddd; /* Optional border */
+    transition: transform 0.3s ease;
+  
+}
+
+#profile-pic:hover {
+    transform: scale(1.1);
+}
+
+/* Ensure everything stays in a single row on all screen sizes */
+@media (max-width: 576px) { /* Extra small screens */
+    .social-container {
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        width: 100%;
+       
+    }
+}
+#profile-pic {
+    width: 25px;
+    height: 25px;
+    object-fit: cover;
+    border: 3px solid #ddd; /* Optional border */
+    transition: transform 0.3s ease;
+}
+
+/* Apply styles for screens 375px and below */
+@media (max-width: 375px) {
+    #profile-pic {
+        margin-bottom: 10px;
+    }
+}
