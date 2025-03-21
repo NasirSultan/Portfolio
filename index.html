@@ -115,12 +115,12 @@ document.addEventListener("DOMContentLoaded", function () {
                 </a>
             
                 <!-- Profile Image -->
-                <img src="IMG_8976.jpg" alt="Profile Picture" class="navbar-img rounded-circle img-fluid" id="profile-pic">
+                <img src="2e2345ff-4976-4412-bbff-361cfb9173d7.jpg" alt="Profile Picture" class="navbar-img rounded-circle img-fluid" id="profile-pic">
             </div>
             
             <!-- Popup Image Viewer (Hidden by Default) -->
             <div id="image-popup" class="image-popup">
-                <img src="IMG_8976.jpg" alt="Enlarged Picture" class="popup-img">
+                <img src="2e2345ff-4976-4412-bbff-361cfb9173d7.jpg" alt="Enlarged Picture" class="popup-img">
             </div>
             
         </div>
@@ -178,15 +178,37 @@ document.addEventListener("DOMContentLoaded", function () {
                 
                 
             </div>
-            <div class="col-sm-6 d-flex justify-content-center align-items-center">
-                <a href="https://drive.google.com/file/d/1UosLwR9fk0OlnAAndtZE1v_pTD8EcEo-/view?usp=drive_link"
-                    target="_blank">
-                    <button type="button" class="cv-btn border-0 rounded-0 btn btn-primary animate-btn"
-                        data-aos="zoom-in" data-aos-duration="2000">
-                        Cover Letter
-                    </button>
-                </a>
+           <!-- Button to Open PDF in Modal -->
+<div class="col-sm-6 d-flex justify-content-center align-items-center">
+    <button type="button" class="cv-btn border-0 rounded-0 btn btn-primary animate-btn"
+        data-aos="zoom-in" data-aos-duration="2000" data-bs-toggle="modal" data-bs-target="#pdfModal">
+        Click to View Cover Letter
+    </button>
+</div>
+
+<!-- Bootstrap Modal for PDF Viewer -->
+<div class="modal fade" id="pdfModal" tabindex="-1" aria-labelledby="pdfModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="pdfModalLabel">Cover Letter</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
+            <div class="modal-body">
+                <iframe src="https://drive.google.com/file/d/1UosLwR9fk0OlnAAndtZE1v_pTD8EcEo-/preview" 
+                    width="100%" height="500px" style="border: none;"></iframe>
+            </div>
+            <div class="modal-footer">
+                <a href="https://drive.google.com/uc?export=download&id=1UosLwR9fk0OlnAAndtZE1v_pTD8EcEo-" 
+                    class="btn btn-success" download>
+                    Download Cover Letter
+                </a>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
         </div>
     </div>
 
