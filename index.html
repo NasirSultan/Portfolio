@@ -216,38 +216,42 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 <!-- 🎓 Education Section -->
+<!-- 🎓 Education Section -->
 <section id="education" class="container py-5">
-    <h2 class="mt-5 pt-5 aos-init aos-animate  my-5" data-aos="zoom-in" data-aos-duration="1500">Education →</h2>
-        <div class="row justify-content-center mt-4">
-            <div class="col-lg-8 col-md-10">
-                <div class="card education-card aos-init aos-animate text-center" data-aos="fade-up" data-aos-duration="1000">
-                    <div class="card-body">
-                        <h4 class="card-title education-title">Bachelor's in Physics</h4>
-                        <p class="card-text">Specialized in <strong>Electronic & Embedded Systems</strong></p>
-                        <p class="university"><strong>UMT</strong> | 2024</p>
+    <h2 class="mt-5 pt-5 aos-init aos-animate my-5" data-aos="zoom-in" data-aos-duration="1500">Education →</h2>
+    <div class="row justify-content-center mt-4">
+        <div class="col-lg-8 col-md-10">
+            <div class="card education-card aos-init aos-animate text-center" data-aos="fade-up" data-aos-duration="1000">
+                <div class="card-body">
+                    <h4 class="card-title education-title">Bachelor's in Physics</h4>
+                    <p class="card-text">Specialized in <strong>Electronic & Embedded Systems</strong></p>
+                    <p class="university"><strong>UMT</strong> | 2024</p>
 
-                        <!-- 🔘 Button to Show Final Year Research -->
-                        <button class="btn research-btn mt-3" data-bs-toggle="modal" data-bs-target="#researchModal">
-                            View Final Year Research
-                        </button>
-                    </div>
+                    <!-- 🔘 Button to Show Final Year Research PDF -->
+                    <button class="btn research-btn mt-3" data-bs-toggle="modal" data-bs-target="#researchModal">
+                        View Final Year Research
+                    </button>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- 📜 Final Year Research Modal -->
+<!-- 📜 Final Year Research Modal (Google Drive PDF Embed) -->
 <div class="modal fade" id="researchModal" tabindex="-1" aria-labelledby="researchModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-lg">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title  text-black" id="researchModalLabel">Obstacle Detection Robot</h5>
+                <h5 class="modal-title text-black" id="researchModalLabel">Final Year Research Paper</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="modal-body research-modal-body text-center">
-                <p class="research-title">The Obstacle Detection Robot is an intelligent system that combines electronics and programming to autonomously navigate its surroundings while avoiding obstacles. It is built using a microcontroller such as an Arduino Uno, ESP32, or Raspberry Pi, along with ultrasonic, infrared (IR), or LIDAR sensors to detect objects in its path. When an obstacle is detected, the robot processes the data using embedded programming, typically written in C++ for Arduino or Python for Raspberry Pi, to make real-time decisions. The motors, controlled via an L298N motor driver, allow the robot to stop, change direction, or reroute itself accordingly. This project is widely used in automation, robotics research, and AI-driven navigation systems, offering a strong foundation for more advanced applications such as self-driving vehicles and industrial automation.</p>
-
+            <div class="modal-body text-center">
+                <!-- 📄 Corrected Google Drive PDF Viewer -->
+                <iframe src="https://drive.google.com/file/d/1qV8Uwx7oKkvjqx_d87qNMZa45ioT0t-l/preview" 
+                        width="100%" height="500px" style="border: none;"></iframe>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
             </div>
         </div>
     </div>
@@ -255,10 +259,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-
-
-
 
 
 
