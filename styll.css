@@ -206,3 +206,380 @@ body {
         height: 40px;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.text-animation {
+    font-size: 3.5rem; /* 🔥 Increased size for large screens */
+    font-weight: bold;
+    text-align: center;
+    
+    /* 🌈 Gradient Text (Left to Right) */
+    background: linear-gradient(to right, #ff7e5f, #ebe8e5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    /* ✨ Enhanced Shadow Effect (More Distance) */
+    text-shadow: 
+        0px 8px 20px rgba(255, 126, 95, 0.6),  /* Soft glow shadow */
+        0px 12px 30px rgba(0, 0, 0, 0.4);     /* Deeper bottom shadow */
+}
+
+/* 📱 Responsive Adjustments */
+@media (max-width: 1024px) { 
+    .text-animation {
+        font-size: 3rem; /* 🔥 Increased for tablets */
+    }
+}
+
+@media (max-width: 768px) { 
+    .text-animation {
+        font-size: 2.5rem; /* 📱 Good for smaller tablets */
+        text-shadow: 
+            0px 6px 15px rgba(255, 126, 95, 0.6),  
+            0px 8px 20px rgba(0, 0, 0, 0.4);
+    }
+}
+
+@media (max-width: 480px) { 
+    .text-animation {
+        font-size: 2rem; /* 📱 Better readability on mobile */
+        text-shadow: 
+            0px 4px 12px rgba(255, 126, 95, 0.6),  
+            0px 6px 15px rgba(0, 0, 0, 0.4);
+    }
+}
+
+/* 🛠️ Extra Small Devices (iPhone SE, small Androids) */
+@media (max-width: 360px) { 
+    .text-animation {
+        font-size: 1.6rem; /* 🔥 Slightly increased for small phones */
+        text-shadow: 
+            0px 3px 10px rgba(255, 126, 95, 0.6),  
+            0px 5px 12px rgba(0, 0, 0, 0.4);
+    }
+}
+
+
+
+
+
+/* 🌟 Navbar Styling */
+/* 🌟 Navbar Styling */
+.navbar {
+    padding: 12px 0;
+    transition: all 0.3s ease-in-out;
+}
+
+/* 🌈 Navbar Brand (Logo) */
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    background: linear-gradient(to right, #252a79, #f0eeec);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: transform 0.3s ease-in-out;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+/* 📌 Navbar Links */
+.navbar-nav .nav-item {
+    font-size: 1.1rem;
+    font-weight: 500;
+    position: relative;
+    transition: color 0.3s ease-in-out;
+    padding: 5px 10px;
+}
+
+/* 🔥 Underline Hover Effect */
+.navbar-nav .nav-item::after {
+    content: "";
+    width: 0;
+    height: 2px;
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: width 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-item:hover::after {
+    width: 100%;
+}
+
+.navbar-nav .nav-item:hover {
+    color: #ff7e5f;
+}
+
+/* 🌀 Social Icons */
+.social-icon {
+    font-size: 1.5rem;
+    color: #fff;
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.social-icon:hover {
+    transform: scale(1.2);
+    color: #ff7e5f;
+}
+
+/* 🌟 Profile Image & Icons (Equal Size) */
+.navbar-img, .social-icon {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* 📌 Adjust Navbar Image & Icons */
+.navbar .d-flex {
+    gap: 15px; /* Adds spacing between icons and profile picture */
+}
+
+/* 🛠️ Mobile Adjustments */
+@media (max-width: 768px) {
+    .logo {
+        font-size: 1.5rem;
+    }
+
+    .navbar-nav .nav-item {
+        font-size: 1rem;
+        padding: 5px;
+    }
+
+    .social-icon {
+        font-size: 1.3rem;
+    }
+
+    .navbar-img {
+        width: 45px;  /* Increased size for mobile */
+        height: 45px;
+    }
+}
+
+/* 🛠️ Extra Small Devices */
+@media (max-width: 480px) {
+    .navbar-img {
+        width: 50px; /* Even larger for very small screens */
+        height: 50px;
+    }
+
+    .social-icon {
+        font-size: 1.2rem;
+    }
+}
+
+
+
+/* 🖼️ Navbar Profile Image */
+.navbar-img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+    cursor: pointer; /* Indicates it's clickable */
+    transition: transform 0.3s ease-in-out;
+}
+
+.navbar-img:hover {
+    transform: scale(1.1);
+}
+
+/* 🎭 Full-Screen Popup Background */
+.image-popup {
+    display: none; /* Initially hidden */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8); /* Dark overlay */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* 📌 Enlarged Image */
+.popup-img {
+    width: 50%;
+    max-width: 500px; /* Prevents being too large */
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.2);
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* 🔥 Fade In Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* 🛠️ Responsive Adjustments */
+@media (max-width: 768px) {
+    .popup-img {
+        width: 80%;
+    }
+}
+
+@media (max-width: 480px) {
+    .popup-img {
+        width: 90%;
+    }
+}
+
+
+
+
+
+/* 🌈 Gradient Text */
+.about-text {
+    font-size: 1.2rem;
+    font-weight: 500;
+   
+    line-height: 1.6;
+    background: linear-gradient(to right, #aca8a8, #b3aaa4, #ffffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* 🛠️ Responsive Adjustments */
+@media (max-width: 768px) {
+    .about-text {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-text {
+        font-size: 0.9rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+-----------------------------
+
+
+/* 🎓 Education Section Styling */
+#education {
+    padding-top: 100px; /* Ensures header is below navbar */
+}
+
+/* 🏫 Left-Aligned Heading */
+.education-heading {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: left;
+    margin-left: 20px;
+}
+
+/* 📌 Responsive Adjustments */
+@media (max-width: 768px) {
+    .education-heading {
+        text-align: left; /* Always left-aligned */
+        font-size: 1.8rem; /* Slightly smaller for small screens */
+    }
+}
+
+/* 📌 Centered Card */
+.education-card {
+    background: rgba(255, 255, 255, 0.1); /* Light Background */
+    color: white;
+    border: none;
+    padding: 30px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    margin: 20px auto; /* Centers the card */
+}
+
+.education-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 10px 20px rgba(255, 255, 255, 0.2);
+}
+
+/* 📌 Centered Text & Font Adjustments */
+.education-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.card-text {
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+.university {
+    font-size: 1.1rem;
+}
+
+/* 🔘 Research Button */
+.research-btn {
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    border: none;
+    padding: 12px 20px;
+    font-size: 1.1rem;
+    transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+    color: white;
+}
+
+.research-btn:hover {
+    transform: scale(1.1);
+    background: linear-gradient(to right, #feb47b, #ff7e5f);
+}
+
+/* 🖤 Modal Background */
+.research-modal-body {
+    background: #222;
+    color: white;
+    padding: 25px;
+}
+
+/* 📱 Responsive Adjustments */
+@media (max-width: 768px) {
+    .education-title {
+        font-size: 1.5rem; /* Decreased font size for mobile */
+    }
+
+    .card-text {
+        font-size: 1.1rem;
+    }
+
+    .university {
+        font-size: 1rem;
+    }
+
+    .research-btn {
+        font-size: 1rem;
+        padding: 10px 18px;
+    }
+}
