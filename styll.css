@@ -835,3 +835,20 @@ body {
 .card {
     overflow: hidden; /* Ensures no content overflows the card */
 }
+/* Ensure the view count and like button are centered properly */
+.view-count-and-like {
+    padding: 10px; /* Add some padding around the container */
+}
+
+/* Add responsiveness for small devices */
+@media (max-width: 768px) {
+    .view-count-and-like {
+        flex-direction: column; /* Stack the elements vertically on smaller screens */
+        gap: 10px; /* Space between elements */
+    }
+
+    .view-count-and-like button,
+    .view-count-and-like span {
+        font-size: 14px; /* Reduce text size for smaller screens */
+    }
+}
