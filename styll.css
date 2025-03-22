@@ -226,13 +226,13 @@ body {
     text-align: center;
     
     /* 🌈 Gradient Text (Left to Right) */
-    background: linear-gradient(to right, #ff7e5f, #ebe8e5);
+    background: linear-gradient(to right, #180266, #ec0b0b);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 
     /* ✨ Enhanced Shadow Effect (More Distance) */
     text-shadow: 
-        0px 8px 20px rgba(255, 126, 95, 0.6),  /* Soft glow shadow */
+        0px 8px 20px rgba(3, 29, 143, 0.6),  /* Soft glow shadow */
         0px 12px 30px rgba(0, 0, 0, 0.4);     /* Deeper bottom shadow */
 }
 
@@ -546,7 +546,7 @@ body {
 
 /* 🔘 Research Button */
 .research-btn {
-    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    background: linear-gradient(to right, #080b99, #e96b6b);
     border: none;
     padding: 12px 20px;
     font-size: 1.1rem;
@@ -556,7 +556,7 @@ body {
 
 .research-btn:hover {
     transform: scale(1.1);
-    background: linear-gradient(to right, #feb47b, #ff7e5f);
+    background: linear-gradient(to right, #4bac58, #e96b6b);
 }
 
 /* 🖤 Modal Background */
