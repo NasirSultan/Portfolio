@@ -26,114 +26,72 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-// Initialize view count and like count from localStorage
-let viewCount = localStorage.getItem('viewCount') ? parseInt(localStorage.getItem('viewCount')) : 0;
-let likeCount = localStorage.getItem('likeCount') ? parseInt(localStorage.getItem('likeCount')) : 0;
-
-// Update the view count
-document.querySelectorAll('#viewCount').forEach(function (viewElement) {
-    viewElement.innerText = `Views: ${viewCount}`;
-});
-
-// Update the like count
-document.querySelectorAll('#likeCount').forEach(function (likeElement) {
-    likeElement.innerText = `Likes: ${likeCount}`;
-});
-
-// Increment the view count and store it in localStorage
-localStorage.setItem('viewCount', viewCount + 1);
-
-// Function to handle the like button click
-function likeAccount() {
-    if (getCookie('hasLikedAccount') !== 'true') {
-        // Increment like count and update UI
-        likeCount++;
-        document.querySelectorAll('#likeCount').forEach(function (likeElement) {
-            likeElement.innerText = `Likes: ${likeCount}`;
-        });
-
-        // Save the updated like count to localStorage
-        localStorage.setItem('likeCount', likeCount);
-
-        alert("You liked this account!");
-        setCookie('hasLikedAccount', 'true', 365);
-
-        const likeBtn = document.querySelector('#accountLikeBtn');
-        likeBtn.innerText = "Liked";
-        likeBtn.disabled = true;
-    } else {
-        alert("You can only like once!");
-    }
+// Function to generate a random integer between a minimum and maximum value
+function getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-// Function to set a cookie
-function setCookie(name, value, days) {
-    const d = new Date();
-    d.setTime(d.getTime() + (days * 24 * 60 * 60 * 1000));
-    let expires = "expires=" + d.toUTCString();
-    document.cookie = name + "=" + value + ";" + expires + ";path=/";
+// Initialize like count and view count from localStorage or set default random values
+let likeCount = localStorage.getItem('likeCount') ? parseInt(localStorage.getItem('likeCount')) : getRandomInt(10, 20);
+let totalViewCount = localStorage.getItem('totalViewCount') ? parseInt(localStorage.getItem('totalViewCount')) : getRandomInt(50, 60); // Default range 50 to 60
+
+// Update the view count every time the page is loaded
+function updateViewCount() {
+    // Increment the view count globally (but don't reset it to random values once set)
+    totalViewCount++;
+
+    // Save the updated view count to localStorage
+    localStorage.setItem('totalViewCount', totalViewCount);
+
+    // Update the UI with the new view count
+    document.getElementById('viewCount').innerText = `Views: ${totalViewCount}`;
 }
 
-// Function to get a cookie value
-function getCookie(name) {
-    let nameEq = name + "=";
-    let ca = document.cookie.split(';');
-    for (let i = 0; i < ca.length; i++) {
-        let c = ca[i];
-        while (c.charAt(0) == ' ') c = c.substring(1, c.length);
-        if (c.indexOf(nameEq) == 0) return c.substring(nameEq.length, c.length);
-    }
-    return "";
-}
-
-
-
-// Initialize like count from localStorage
-
-
-// Function to update the like count on the UI
+// Update the like count in the UI
 function updateLikeCount() {
-    document.querySelectorAll('#likeCount').forEach(function (likeElement) {
-        likeElement.innerText = `Likes: ${likeCount}`;
-    });
+    document.getElementById('likeCount').innerText = `Likes: ${likeCount}`;
 }
 
-// Update the like count when the page loads
+// Update the UI on page load
+updateViewCount();
 updateLikeCount();
 
 // Function to handle the like button click
 function likeAccount() {
+    // Check if the user has already liked this post by checking the cookie
     if (getCookie('hasLikedAccount') !== 'true') {
-        // Increment like count and update UI
+        // Increment the like count
         likeCount++;
-        localStorage.setItem('likeCount', likeCount); // Save updated like count to localStorage
+        
+        // Save the updated like count to localStorage
+        localStorage.setItem('likeCount', likeCount);
 
-        // Update the like count on the page
+        // Update the UI with the new like count
         updateLikeCount();
 
         // Set the cookie to prevent future likes
-        setCookie('hasLikedAccount', 'true', 365);
+        setCookie('hasLikedAccount', 'true', 365); // Cookie expires in 365 days
 
-        // Disable the like button after clicking
-        const likeBtn = document.querySelector('#accountLikeBtn');
-        likeBtn.innerText = "Liked";
+        // Change the button text and disable it
+        const likeBtn = document.getElementById('accountLikeBtn');
+        likeBtn.innerText = 'Liked';
         likeBtn.disabled = true;
 
-        alert("You liked this account!");
+        alert('You liked this account!');
     } else {
-        alert("You can only like once!");
+        alert('You can only like once!');
     }
 }
 
 // Function to set a cookie
 function setCookie(name, value, days) {
     const d = new Date();
-    d.setTime(d.getTime() + (days * 24 * 60 * 60 * 1000));
+    d.setTime(d.getTime() + (days * 24 * 60 * 60 * 1000)); // Set expiration time
     let expires = "expires=" + d.toUTCString();
     document.cookie = name + "=" + value + ";" + expires + ";path=/";
 }
 
-// Function to get a cookie value
+// Function to get the value of a cookie by its name
 function getCookie(name) {
     let nameEq = name + "=";
     let ca = document.cookie.split(';');
