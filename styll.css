@@ -871,3 +871,7 @@ body {
         font-size: 14px; /* Reduce text size for smaller screens */
     }
 }
+html, body {
+    overflow-x: hidden;
+  }
+  
