@@ -216,60 +216,79 @@ body {
 
 
 
-
-
-
-
 .text-animation {
-    font-size: 3.5rem; /* 🔥 Increased size for large screens */
+    font-size: 3.5rem; /* 🔥 Large size for desktops */
     font-weight: bold;
     text-align: center;
     
-    /* 🌈 Gradient Text (Left to Right) */
-    background: linear-gradient(to right, #180266, #ec0b0b);
+    /* 🌈 Gradient Text */
+    background: linear-gradient(45deg, #180266, #57008a, #f7f7f7, #000000);
+    background-size: 300% 300%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    animation: gradientShift 6s infinite alternate ease-in-out;
 
-    /* ✨ Enhanced Shadow Effect (More Distance) */
-    text-shadow: 
-        0px 8px 20px rgba(3, 29, 143, 0.6),  /* Soft glow shadow */
-        0px 12px 30px rgba(0, 0, 0, 0.4);     /* Deeper bottom shadow */
+    /* ⬇️ Dynamic Bottom Shadow */
+    text-shadow: 0px 8px 16px rgba(24, 2, 102, 0.75);
+
+    /* 🌟 Glowing Effect */
+    transition: all 0.3s ease-in-out;
+}
+
+/* 🔥 Hover Effect - Slight Text Scaling & Glow */
+.text-animation:hover {
+    transform: scale(1.1);
+    text-shadow: 0px 10px 20px rgba(192, 38, 211, 0.9);
+}
+
+/* 🌈 Gradient Animation */
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
 }
 
 /* 📱 Responsive Adjustments */
 @media (max-width: 1024px) { 
     .text-animation {
-        font-size: 3rem; /* 🔥 Increased for tablets */
+        font-size: 3rem;
+        text-shadow: 0px 6px 12px rgba(24, 2, 102, 0.6);
     }
 }
 
 @media (max-width: 768px) { 
     .text-animation {
-        font-size: 2.5rem; /* 📱 Good for smaller tablets */
-        text-shadow: 
-            0px 6px 15px rgba(255, 126, 95, 0.6),  
-            0px 8px 20px rgba(0, 0, 0, 0.4);
+        font-size: 2.5rem;
+        text-shadow: 0px 5px 10px rgba(192, 38, 211, 0.5);
     }
 }
 
 @media (max-width: 480px) { 
     .text-animation {
-        font-size: 2rem; /* 📱 Better readability on mobile */
-        text-shadow: 
-            0px 4px 12px rgba(255, 126, 95, 0.6),  
-            0px 6px 15px rgba(0, 0, 0, 0.4);
+        font-size: 1.4rem;
+        text-shadow: 0px 4px 8px rgba(192, 38, 211, 0.4);
     }
 }
 
-/* 🛠️ Extra Small Devices (iPhone SE, small Androids) */
+/* 🛠️ Extra Small Devices */
 @media (max-width: 360px) { 
     .text-animation {
-        font-size: 1.6rem; /* 🔥 Slightly increased for small phones */
-        text-shadow: 
-            0px 3px 10px rgba(255, 126, 95, 0.6),  
-            0px 5px 12px rgba(0, 0, 0, 0.4);
+        font-size: 1.5rem;
+        text-shadow: 0px 3px 6px rgba(192, 38, 211, 0.3);
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
