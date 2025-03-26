@@ -203,7 +203,6 @@
                         </div>
                         <div class="modal-body">
                             <iframe src="https://drive.google.com/file/d/1LEhKo5x9dsmXAzDZOQBv1Sve0wGjoQHk/preview"
-
                                 width="100%" height="500px" style="border: none;"></iframe>
                         </div>
                         <div class="modal-footer">
@@ -279,12 +278,19 @@
         <h2 class="aos-init aos-animate mt-4 pt-4" data-aos="zoom-in" data-aos-duration="1500">Skills →</h2><br><br>
         <div class="row text-center">
             <div class="col-sm-4 aos-init aos-animate" data-aos="fade-up" data-aos-duration="1000">
-                <div class="skill-card">
-                    <i class="fa-brands fa-html5 text-danger fs-1"></i>
-                    <h4 class="mt-2">HTML5</h4>
+                <div class="skill-card" onmouseover="animatePercentage(this)">
+                    <div class="skill-card-inner">
+                        <!-- Front Side -->
+                        <div class="skill-card-front">
+                            <i class="fa-brands fa-html5 text-danger fs-1"></i>
+                            <h4 class="mt-2">HTML5</h4>
+                        </div>
+
+                    </div>
                 </div>
             </div>
-            
+
+
             <div class="col-sm-4 aos-init aos-animate" data-aos="fade-up" data-aos-duration="1200">
                 <div class="skill-card">
                     <i class="fa-brands fa-css3-alt text-primary fs-1"></i>
@@ -302,7 +308,7 @@
 
 
 
-        
+
         <div class="row text-center mt-4">
             <div class="col-sm-4 aos-init aos-animate" data-aos="fade-up" data-aos-duration="1600">
                 <div class="skill-card">
@@ -367,26 +373,26 @@
 
 
         <!-- Added Vue 3, MongoDB, and RESTful API -->
-<div class="row text-center mt-4">
-    <div class="col-sm-4 aos-init aos-animate" data-aos="fade-up" data-aos-duration="3400">
-        <div class="skill-card">
-            <i class="fa-brands fa-vuejs text-success fs-1"></i>
-            <h4 class="mt-2">Vue 3</h4>
+        <div class="row text-center mt-4">
+            <div class="col-sm-4 aos-init aos-animate" data-aos="fade-up" data-aos-duration="3400">
+                <div class="skill-card">
+                    <i class="fa-brands fa-vuejs text-success fs-1"></i>
+                    <h4 class="mt-2">Vue 3</h4>
+                </div>
+            </div>
+            <div class="col-sm-4 aos-init aos-animate" data-aos="fade-up" data-aos-duration="3600">
+                <div class="skill-card">
+                    <i class="fa-solid fa-database text-secondary fs-1"></i>
+                    <h4 class="mt-2">MongoDB</h4>
+                </div>
+            </div>
+            <div class="col-sm-4 aos-init aos-animate" data-aos="fade-up" data-aos-duration="3800">
+                <div class="skill-card">
+                    <i class="fa-solid fa-network-wired text-warning fs-1"></i>
+                    <h4 class="mt-2">RESTful API</h4>
+                </div>
+            </div>
         </div>
-    </div>
-    <div class="col-sm-4 aos-init aos-animate" data-aos="fade-up" data-aos-duration="3600">
-        <div class="skill-card">
-            <i class="fa-solid fa-database text-secondary fs-1"></i>
-            <h4 class="mt-2">MongoDB</h4>
-        </div>
-    </div>
-    <div class="col-sm-4 aos-init aos-animate" data-aos="fade-up" data-aos-duration="3800">
-        <div class="skill-card">
-            <i class="fa-solid fa-network-wired text-warning fs-1"></i>
-            <h4 class="mt-2">RESTful API</h4>
-        </div>
-    </div>
-</div>
 
     </div>
 
@@ -438,13 +444,21 @@
                         </h5>
                         <div id="infoContent1" style="display: none;">
                             <p class="card-text mb-4">
-                                Throughout my journey as a full-stack developer, I have worked on diverse projects involving real-world problem-solving and scalable application development. My experience includes hands-on work with modern technologies like React, Laravel, and MySQL, where I have built dynamic and interactive applications. 
-                            
-                                I have developed and optimized backend services, ensuring secure API integrations and efficient database management. On the frontend, I have created seamless user experiences with well-structured, responsive interfaces. 
-                            
-                                My expertise extends to handling authentication systems, role-based access control, and real-time data processing, demonstrating a deep understanding of software architecture and performance optimization. Through various projects, I have refined my ability to write clean, maintainable code while adhering to industry best practices.
+                                Throughout my journey as a full-stack developer, I have worked on diverse projects
+                                involving real-world problem-solving and scalable application development. My experience
+                                includes hands-on work with modern technologies like React, Laravel, and MySQL, where I
+                                have built dynamic and interactive applications.
+
+                                I have developed and optimized backend services, ensuring secure API integrations and
+                                efficient database management. On the frontend, I have created seamless user experiences
+                                with well-structured, responsive interfaces.
+
+                                My expertise extends to handling authentication systems, role-based access control, and
+                                real-time data processing, demonstrating a deep understanding of software architecture
+                                and performance optimization. Through various projects, I have refined my ability to
+                                write clean, maintainable code while adhering to industry best practices.
                             </p>
-                            
+
                         </div>
                         <div class="d-flex flex-column gap-2">
                             <button id="toggleBtn1"
@@ -464,8 +478,16 @@
                                 <span id="viewCount">Views: 0</span> <!-- This will show the view count -->
                                 <button id="accountLikeBtn" class="btn btn-outline-warning"
                                     onclick="likeAccount()">Like</button> <!-- This is the like button -->
-                                <span id="likeCount">Likes: 0</span> <!-- This will show the like count -->
+                                <span id="likeCount">Likes: 0</span>
+
+
+                                <span> <a href="https://github.com/yourprofile" target="_blank" class="github-btn">
+                                        <i class="fa-brands fa-github"></i> 
+                                    </a>
+                                </span><!-- This will show the like count -->
                             </div>
+
+
                         </div>
                     </div>
                 </div>
@@ -495,13 +517,13 @@
                                 <li class="skill-item">Tailwind CSS</li>
                                 <li class="skill-item">Git & GitHub</li>
                                 <li class="skill-item">Authentication & Security</li>
-                           
+
                             </ul>
-                           
+
                         </div>
-                        
-                       
-                        
+
+
+
                     </div>
                 </div>
             </div>
@@ -518,157 +540,189 @@
 
 
 
-        <!-- Project 2: Attendance Portal System -->
-<div class="col-lg-6 col-md-8 col-sm-10 mx-auto aos-init aos-animate" data-aos="fade-up" data-aos-duration="1200">
-    <div class="card shadow-lg bg-dark text-light project-card rounded-3d">
-        <!-- Carousel -->
-        <div id="carouselContent2" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="Screenshot (283).png" alt="Attendance Portal System" class="d-block w-100 rounded-t-lg">
+            <!-- Project 2: Attendance Portal System -->
+            <div class="col-lg-6 col-md-8 col-sm-10 mx-auto aos-init aos-animate" data-aos="fade-up"
+                data-aos-duration="1200">
+                <div class="card shadow-lg bg-dark text-light project-card rounded-3d">
+                    <!-- Carousel -->
+                    <div id="carouselContent2" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="Screenshot (283).png" alt="Attendance Portal System"
+                                    class="d-block w-100 rounded-t-lg">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="Screenshot (284).png" alt="Project Image 2"
+                                    class="d-block w-100 rounded-t-lg">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="Screenshot (285).png" alt="Project Image 3"
+                                    class="d-block w-100 rounded-t-lg">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselContent2"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselContent2"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-2xl font-semibold mb-3">
+                            <i class="fa-solid fa-check-circle text-purple-600"></i> Attendance Portal System
+                        </h5>
+                        <div id="infoContent2" style="display: none;">
+                            <p class="card-text mb-4">
+                                This comprehensive Academic Management System streamlines administrative tasks by
+                                allowing users to <strong>mark attendance</strong>, <strong>submit and track leave
+                                    requests</strong>, and <strong>update profile pictures</strong>. Developed using
+                                <strong>React.js, Laravel, and MySQL</strong>, it ensures <strong>secure role-based
+                                    authentication</strong> with <strong>Laravel Sanctum</strong> and features an
+                                intuitive <strong>leave management system</strong>. The platform offers a
+                                <strong>responsive and modern UI</strong> powered by <strong>Tailwind CSS</strong>,
+                                delivering an optimized user experience. Additionally, <strong>RESTful API
+                                    integration</strong> ensures seamless communication between the frontend and
+                                backend, enhancing performance and scalability.
+                            </p>
+
+                        </div>
+
+                        <div class="d-flex flex-column gap-2">
+                            <button id="toggleBtn2"
+                                class="btn btn-secondary bg-gray-700 hover:bg-gray-800 text-white rounded-full shadow-md px-6 py-2 w-100">
+                                Description
+                            </button>
+                            <a href="https://vimeo.com/1047108469/c45d0ca6d6?share=copy"
+                                class="btn btn-primary bg-blue-600 hover:bg-blue-700 text-white rounded-full shadow-md px-6 py-2 w-100">
+                                Watch Video
+                            </a>
+                            <button class="btn btn-info w-100 mt-3" data-bs-toggle="modal"
+                                data-bs-target="#skillsModal2">
+                                See Skills
+                            </button>
+                        </div>
+
+                        <!-- View Count and Like Button for Project 2 -->
+                        <div class="view-count d-flex justify-content-center align-items-center mt-3 gap-3">
+                            <span id="viewCount2">Views: 0</span> <!-- Project 2 View Count -->
+                            <button id="accountLikeBtn2" class="btn btn-outline-warning"
+                                onclick="likeAccount2()">Like</button> <!-- Like Button -->
+                            <span id="likeCount2">Likes: 0</span> <!-- Project 2 Like Count -->
+                        </div>
+                    </div>
                 </div>
-                <div class="carousel-item">
-                    <img src="Screenshot (284).png" alt="Project Image 2" class="d-block w-100 rounded-t-lg">
+            </div>
+
+            <!-- Skills Modal -->
+            <!-- Corrected "See Skills" Button -->
+
+
+            <!-- Skills Modal (Ensure ID Matches) -->
+            <div class="modal fade" id="skillsModal2" tabindex="-1" aria-labelledby="skillsModalLabel2"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="skillsModalLabel2">Skills</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <h5 class="mb-3">Tech Stack & Skills</h5>
+                            <ul class="list-unstyled d-flex flex-wrap gap-3 justify-content-start">
+                                <li class="skill-item badge  text-white px-3 py-2">React.js</li>
+                                <li class="skill-item badge text-white px-3 py-2">Laravel</li>
+                                <li class="skill-item badge  text-white px-3 py-2">MySQL</li>
+                                <li class="skill-item badge text-white px-3 py-2">Tailwind CSS</li>
+                                <li class="skill-item badge   px-3 py-2">Laravel Sanctum</li>
+                                <li class="skill-item badge   px-3 py-2">RESTful APIs</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-                <div class="carousel-item">
-                    <img src="Screenshot (285).png" alt="Project Image 3" class="d-block w-100 rounded-t-lg">
-                </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselContent2" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselContent2" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div>
-
-        <div class="card-body text-center">
-            <h5 class="card-title text-2xl font-semibold mb-3">
-                <i class="fa-solid fa-check-circle text-purple-600"></i> Attendance Portal System
-            </h5>
-            <div id="infoContent2" style="display: none;">
-                <p class="card-text mb-4">
-                    This comprehensive Academic Management System streamlines administrative tasks by allowing users to <strong>mark attendance</strong>, <strong>submit and track leave requests</strong>, and <strong>update profile pictures</strong>. Developed using <strong>React.js, Laravel, and MySQL</strong>, it ensures <strong>secure role-based authentication</strong> with <strong>Laravel Sanctum</strong> and features an intuitive <strong>leave management system</strong>. The platform offers a <strong>responsive and modern UI</strong> powered by <strong>Tailwind CSS</strong>, delivering an optimized user experience. Additionally, <strong>RESTful API integration</strong> ensures seamless communication between the frontend and backend, enhancing performance and scalability.
-                </p>
-                
-            </div>
-
-            <div class="d-flex flex-column gap-2">
-                <button id="toggleBtn2" class="btn btn-secondary bg-gray-700 hover:bg-gray-800 text-white rounded-full shadow-md px-6 py-2 w-100">
-                    Description
-                </button>
-                <a href="https://vimeo.com/1047108469/c45d0ca6d6?share=copy" class="btn btn-primary bg-blue-600 hover:bg-blue-700 text-white rounded-full shadow-md px-6 py-2 w-100">
-                    Watch Video
-                </a>
-                <button class="btn btn-info w-100 mt-3" data-bs-toggle="modal" data-bs-target="#skillsModal2">
-                    See Skills
-                </button>
-            </div>
-
-            <!-- View Count and Like Button for Project 2 -->
-            <div class="view-count d-flex justify-content-center align-items-center mt-3 gap-3">
-                <span id="viewCount2">Views: 0</span> <!-- Project 2 View Count -->
-                <button id="accountLikeBtn2" class="btn btn-outline-warning" onclick="likeAccount2()">Like</button> <!-- Like Button -->
-                <span id="likeCount2">Likes: 0</span> <!-- Project 2 Like Count -->
-            </div>
-        </div>
-    </div>
-</div>
-
-        <!-- Skills Modal -->
-<!-- Corrected "See Skills" Button -->
-
-
-<!-- Skills Modal (Ensure ID Matches) -->
-<div class="modal fade" id="skillsModal2" tabindex="-1" aria-labelledby="skillsModalLabel2" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="skillsModalLabel2">Skills</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <h5 class="mb-3">Tech Stack & Skills</h5>
-                <ul class="list-unstyled d-flex flex-wrap gap-3 justify-content-start">
-                    <li class="skill-item badge  text-white px-3 py-2">React.js</li>
-                    <li class="skill-item badge text-white px-3 py-2">Laravel</li>
-                    <li class="skill-item badge  text-white px-3 py-2">MySQL</li>
-                    <li class="skill-item badge text-white px-3 py-2">Tailwind CSS</li>
-                    <li class="skill-item badge   px-3 py-2">Laravel Sanctum</li>
-                    <li class="skill-item badge   px-3 py-2">RESTful APIs</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</div>
 
 
             <!-- Project 3: E-Commerce Dashboard -->
-          <!-- Project 3: E-Commerce Dashboard -->
-<div class="col-lg-6 col-md-8 col-sm-10 mx-auto aos-init aos-animate" data-aos="fade-up" data-aos-duration="1000">
-    <div class="card shadow-lg bg-dark text-light project-card rounded-3d">
-        <!-- Carousel -->
-        <div id="carouselContent3" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="Screenshot (286).png" alt="E-Commerce Dashboard" class="d-block w-100 rounded-t-lg">
-                </div>
-                <div class="carousel-item">
-                    <img src="Screenshot (288).png" alt="Project Image 2" class="d-block w-100 rounded-t-lg">
-                </div>
-                <div class="carousel-item">
-                    <img src="Screenshot (289).png" alt="Project Image 3" class="d-block w-100 rounded-t-lg">
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselContent3" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselContent3" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div>
+            <!-- Project 3: E-Commerce Dashboard -->
+            <div class="col-lg-6 col-md-8 col-sm-10 mx-auto aos-init aos-animate" data-aos="fade-up"
+                data-aos-duration="1000">
+                <div class="card shadow-lg bg-dark text-light project-card rounded-3d">
+                    <!-- Carousel -->
+                    <div id="carouselContent3" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="Screenshot (286).png" alt="E-Commerce Dashboard"
+                                    class="d-block w-100 rounded-t-lg">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="Screenshot (288).png" alt="Project Image 2"
+                                    class="d-block w-100 rounded-t-lg">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="Screenshot (289).png" alt="Project Image 3"
+                                    class="d-block w-100 rounded-t-lg">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselContent3"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselContent3"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
 
-        <div class="card-body text-center">
-            <h5 class="card-title text-2xl font-semibold mb-3">
-                <i class="fa-solid fa-briefcase text-teal-500"></i> E-Commerce Dashboard
-            </h5>
-            <div id="infoContent3" style="display: none;">
-                <p class="card-text mb-4">
-                    This project integrates <strong>MERN Stack (React, Node.js, Express, MongoDB)</strong>
-                    with <strong>PHP-Laravel</strong>
-                    to create an <strong>efficient e-commerce dashboard</strong>. The <strong>React.js frontend</strong> provides product
-                    management features, while the <strong>Node.js, Express, and Laravel backend</strong> ensures secure authentication
-                    and CRUD operations. <strong>MongoDB and MySQL</strong> are used for data storage,
-                    ensuring scalability and fast queries.
-                </p>
-            </div>
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-2xl font-semibold mb-3">
+                            <i class="fa-solid fa-briefcase text-teal-500"></i> E-Commerce Dashboard
+                        </h5>
+                        <div id="infoContent3" style="display: none;">
+                            <p class="card-text mb-4">
+                                This project integrates <strong>MERN Stack (React, Node.js, Express, MongoDB)</strong>
+                                with <strong>PHP-Laravel</strong>
+                                to create an <strong>efficient e-commerce dashboard</strong>. The <strong>React.js
+                                    frontend</strong> provides product
+                                management features, while the <strong>Node.js, Express, and Laravel backend</strong>
+                                ensures secure authentication
+                                and CRUD operations. <strong>MongoDB and MySQL</strong> are used for data storage,
+                                ensuring scalability and fast queries.
+                            </p>
+                        </div>
 
-            <!-- Buttons with Full Width on Small Screens -->
-            <div class="d-flex flex-column gap-2">
-                <button id="toggleBtn3" class="btn btn-secondary bg-gray-700 hover:bg-gray-800 text-white rounded-full shadow-md px-6 py-2 w-100">
-                    Description
-                </button>
-                <a href="" class="btn btn-primary bg-blue-600 hover:bg-blue-700 text-white rounded-full shadow-md px-6 py-2 w-100">
-                    No Video Availble
-                </a>
-                <button class="btn btn-info w-100 mt-3" data-bs-toggle="modal" data-bs-target="#skillsModal3">
-                    See Skills
-                </button>
-            </div>
+                        <!-- Buttons with Full Width on Small Screens -->
+                        <div class="d-flex flex-column gap-2">
+                            <button id="toggleBtn3"
+                                class="btn btn-secondary bg-gray-700 hover:bg-gray-800 text-white rounded-full shadow-md px-6 py-2 w-100">
+                                Description
+                            </button>
+                            <a href=""
+                                class="btn btn-primary bg-blue-600 hover:bg-blue-700 text-white rounded-full shadow-md px-6 py-2 w-100">
+                                No Video Availble
+                            </a>
+                            <button class="btn btn-info w-100 mt-3" data-bs-toggle="modal"
+                                data-bs-target="#skillsModal3">
+                                See Skills
+                            </button>
+                        </div>
 
-            <!-- View Count with Icon and Account Like Button -->
-            <div class="view-count d-flex justify-content-center align-items-center mt-3 gap-3">
-                <span id="viewCount3">Views: 0</span> <!-- This will show the view count -->
-                <button id="accountLikeBtn3" class="btn btn-outline-warning" onclick="likeAccount3()">Like</button> <!-- This is the like button -->
-                <span id="likeCount3">Likes: 0</span> <!-- This will show the like count -->
+                        <!-- View Count with Icon and Account Like Button -->
+                        <div class="view-count d-flex justify-content-center align-items-center mt-3 gap-3">
+                            <span id="viewCount3">Views: 0</span> <!-- This will show the view count -->
+                            <button id="accountLikeBtn3" class="btn btn-outline-warning"
+                                onclick="likeAccount3()">Like</button> <!-- This is the like button -->
+                            <span id="likeCount3">Likes: 0</span> <!-- This will show the like count -->
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
-</div>
 
             <!-- Skills Modal -->
             <div class="modal fade" id="skillsModal3" tabindex="-1" aria-labelledby="skillsModalLabel3"
@@ -696,76 +750,92 @@
 
             <!-- Project 4: Another Project -->
             <!-- Project 4: Multi-Login Medical Management System -->
-           <!-- Project 4: Multi-Login Medical Management System -->
-<div class="col-lg-6 col-md-8 col-sm-10 mx-auto aos-init aos-animate" data-aos="fade-up" data-aos-duration="1000">
-    <div class="card shadow-lg bg-dark text-light project-card rounded-3d">
-        <!-- Carousel -->
-        <div id="carouselContent4" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="Screenshot (465).png" alt="Internship Projects" class="d-block w-100 rounded-t-lg">
-                </div>
-                <div class="carousel-item">
-                    <img src="Screenshot (466).png" alt="Project Image 2" class="d-block w-100 rounded-t-lg">
-                </div>
-                <div class="carousel-item">
-                    <img src="Screenshot (467).png" alt="Project Image 3" class="d-block w-100 rounded-t-lg">
-                </div>
-                <div class="carousel-item">
-                    <img src="Screenshot (468).png" alt="Project Image 4" class="d-block w-100 rounded-t-lg">
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselContent4" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselContent4" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div>
+            <!-- Project 4: Multi-Login Medical Management System -->
+            <div class="col-lg-6 col-md-8 col-sm-10 mx-auto aos-init aos-animate" data-aos="fade-up"
+                data-aos-duration="1000">
+                <div class="card shadow-lg bg-dark text-light project-card rounded-3d">
+                    <!-- Carousel -->
+                    <div id="carouselContent4" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="Screenshot (465).png" alt="Internship Projects"
+                                    class="d-block w-100 rounded-t-lg">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="Screenshot (466).png" alt="Project Image 2"
+                                    class="d-block w-100 rounded-t-lg">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="Screenshot (467).png" alt="Project Image 3"
+                                    class="d-block w-100 rounded-t-lg">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="Screenshot (468).png" alt="Project Image 4"
+                                    class="d-block w-100 rounded-t-lg">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselContent4"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselContent4"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
 
-        <div class="card-body text-center">
-            <h5 class="card-title text-2xl font-semibold mb-3">
-                <i class="fa-solid fa-check-circle text-purple-600"></i> Multi-Login Medical Management System
-            </h5>
-            <div id="infoContent4" style="display: none;">
-                <p class="card-text mb-4">
-                    The <strong>HealthPlus Medical Store Web Application</strong> is a <strong>full-featured</strong>
-                    system built with <strong>Laravel and React.js</strong>. It supports a <strong>multi-login system</strong>
-                    for <strong>admins, store managers, and customers</strong>.
-                    <ul>
-                        <li><strong>Admins</strong>: Upload products, set prices, and track sales.</li>
-                        <li><strong>Store Managers</strong>: Manage inventory, process orders, and oversee transactions.</li>
-                        <li><strong>Customers</strong>: Browse medical products, place orders, and track their purchases.</li>
-                    </ul>
-                    The system ensures <strong>secure role-based access control</strong> and
-                    <strong>automated inventory updates</strong> based on real-time transactions.
-                </p>
-            </div>
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-2xl font-semibold mb-3">
+                            <i class="fa-solid fa-check-circle text-purple-600"></i> Multi-Login Medical Management
+                            System
+                        </h5>
+                        <div id="infoContent4" style="display: none;">
+                            <p class="card-text mb-4">
+                                The <strong>HealthPlus Medical Store Web Application</strong> is a
+                                <strong>full-featured</strong>
+                                system built with <strong>Laravel and React.js</strong>. It supports a
+                                <strong>multi-login system</strong>
+                                for <strong>admins, store managers, and customers</strong>.
+                            <ul>
+                                <li><strong>Admins</strong>: Upload products, set prices, and track sales.</li>
+                                <li><strong>Store Managers</strong>: Manage inventory, process orders, and oversee
+                                    transactions.</li>
+                                <li><strong>Customers</strong>: Browse medical products, place orders, and track their
+                                    purchases.</li>
+                            </ul>
+                            The system ensures <strong>secure role-based access control</strong> and
+                            <strong>automated inventory updates</strong> based on real-time transactions.
+                            </p>
+                        </div>
 
-            <!-- Buttons with Full Width on Small Screens -->
-            <div class="d-flex flex-column gap-2">
-                <button id="toggleBtn4" class="btn btn-secondary bg-gray-700 hover:bg-gray-800 text-white rounded-full shadow-md px-6 py-2 w-100">
-                    Description
-                </button>
-                <a href="https://vimeo.com/1057110770?share=copy#t=0" class="btn btn-primary bg-blue-600 hover:bg-blue-700 text-white rounded-full shadow-md px-6 py-2 w-100">
-                    Watch Video
-                </a>
-                <button class="btn btn-info w-100 mt-3" data-bs-toggle="modal" data-bs-target="#skillsModal4">
-                    See Skills
-                </button>
-            </div>
+                        <!-- Buttons with Full Width on Small Screens -->
+                        <div class="d-flex flex-column gap-2">
+                            <button id="toggleBtn4"
+                                class="btn btn-secondary bg-gray-700 hover:bg-gray-800 text-white rounded-full shadow-md px-6 py-2 w-100">
+                                Description
+                            </button>
+                            <a href="https://vimeo.com/1057110770?share=copy#t=0"
+                                class="btn btn-primary bg-blue-600 hover:bg-blue-700 text-white rounded-full shadow-md px-6 py-2 w-100">
+                                Watch Video
+                            </a>
+                            <button class="btn btn-info w-100 mt-3" data-bs-toggle="modal"
+                                data-bs-target="#skillsModal4">
+                                See Skills
+                            </button>
+                        </div>
 
-            <!-- View Count with Icon and Account Like Button -->
-            <div class="view-count d-flex justify-content-center align-items-center mt-3 gap-3">
-                <span id="viewCount4">Views: 0</span> <!-- This will show the view count -->
-                <button id="accountLikeBtn4" class="btn btn-outline-warning" onclick="likeAccount4()">Like</button> <!-- This is the like button -->
-                <span id="likeCount4">Likes: 0</span> <!-- This will show the like count -->
+                        <!-- View Count with Icon and Account Like Button -->
+                        <div class="view-count d-flex justify-content-center align-items-center mt-3 gap-3">
+                            <span id="viewCount4">Views: 0</span> <!-- This will show the view count -->
+                            <button id="accountLikeBtn4" class="btn btn-outline-warning"
+                                onclick="likeAccount4()">Like</button> <!-- This is the like button -->
+                            <span id="likeCount4">Likes: 0</span> <!-- This will show the like count -->
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
-</div>
 
             <!-- Skills Modal -->
             <div class="modal fade" id="skillsModal4" tabindex="-1" aria-labelledby="skillsModalLabel4"
@@ -786,184 +856,221 @@
                                 <li class="skill-item badge  text-white px-3 py-2">Role-Based Authentication</li>
                             </ul>
                         </div>
-                        
+
                     </div>
                 </div>
-     
-     
-     
+
+
+
             </div>
 
-          <!-- Project 5: 
+            <!-- Project 5: 
 E-Library - Laravel-Based Digital Library -->
 
-<div class="col-lg-6 col-md-8 col-sm-10 mx-auto aos-init aos-animate" data-aos="fade-up" data-aos-duration="1000">
-    <div class="card shadow-lg bg-dark text-light project-card rounded-3d">
-        <!-- Carousel -->
-        <div id="carouselContent5" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="Screenshot (562).png" alt="Internship Projects" class="d-block w-100 rounded-t-lg">
+            <div class="col-lg-6 col-md-8 col-sm-10 mx-auto aos-init aos-animate" data-aos="fade-up"
+                data-aos-duration="1000">
+                <div class="card shadow-lg bg-dark text-light project-card rounded-3d">
+                    <!-- Carousel -->
+                    <div id="carouselContent5" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="Screenshot (562).png" alt="Internship Projects"
+                                    class="d-block w-100 rounded-t-lg">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="Screenshot (563).png" alt="Project Image 2"
+                                    class="d-block w-100 rounded-t-lg">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="Screenshot (564).png" alt="Project Image 3"
+                                    class="d-block w-100 rounded-t-lg">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="Screenshot (565).png" alt="Project Image 4"
+                                    class="d-block w-100 rounded-t-lg">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselContent5"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselContent5"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-2xl font-semibold mb-3">
+                            <i class="fa-solid fa-check-circle text-purple-600"></i>
+                            E-Library - Laravel-Based Digital Library
+                        </h5>
+                        <div id="infoContent5" style="display: none;">
+                            <p class="card-text mb-4 toggleBtn5">
+                                The <strong>E-Library – Laravel-Based Digital Library</strong> is a
+                                <strong>feature-rich</strong> system built with <strong>Laravel 11, Bootstrap, and
+                                    Tailwind CSS</strong>, offering a seamless reading experience with structured book
+                                and chapter management.
+                            <ul>
+                                <li><strong>Admins</strong>: Manage books and chapters, update metadata, and control
+                                    user access.</li>
+                                <li><strong>Users</strong>: Browse books, search by title or author, and read content
+                                    with a smooth navigation experience.</li>
+                            </ul>
+                            The system features <strong>efficient CRUD operations</strong>, <strong>pagination for
+                                optimized performance</strong>, and <strong>database seeding</strong> to preload sample
+                            books for quick testing.
+                            </p>
+
+                        </div>
+
+                        <!-- Buttons -->
+                        <div class="d-flex flex-column gap-2">
+                            <button id="toggleBtn5"
+                                class="btn btn-secondary bg-gray-700 hover:bg-gray-800 text-white rounded-full shadow-md px-6 py-2 w-100">
+                                Description
+                            </button>
+                            <a href="https://vimeo.com/1063828686/56b1235e53?ts=0&share=copy"
+                                class="btn btn-primary bg-blue-600 hover:bg-blue-700 text-white rounded-full shadow-md px-6 py-2 w-100">
+                                Watch Video
+                            </a>
+                            <button class="btn btn-info w-100 mt-3" data-bs-toggle="modal"
+                                data-bs-target="#skillsModal5">
+                                See Skills
+                            </button>
+                        </div>
+
+                        <!-- View Count and Like Button -->
+                        <div class="view-count d-flex justify-content-center align-items-center mt-3 gap-3">
+                            <span id="viewCount5">Views: 0</span>
+                            <button id="accountLikeBtn5" class="btn btn-outline-warning"
+                                onclick="likeAccount5()">Like</button>
+                            <span id="likeCount5">Likes: 0</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="carousel-item">
-                    <img src="Screenshot (563).png" alt="Project Image 2" class="d-block w-100 rounded-t-lg">
+            </div>
+
+            <!-- Skills Modal -->
+            <div class="modal fade" id="skillsModal5" tabindex="-1" aria-labelledby="skillsModalLabel5"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="skillsModalLabel4">Skills</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <h5 class="mb-3">Tech Stack & Key Features</h5>
+                            <ul class="list-unstyled d-flex flex-wrap gap-3 justify-content-start">
+                                <li class="skill-item badge  px-3 py-2">Laravel (Backend & Frontend)</li>
+                                <li class="skill-item badge  px-3 py-2">MySQL</li>
+                                <li class="skill-item badge  px-3 py-2">JavaScript</li>
+                                <li class="skill-item badge  px-3 py-2">Tailwind CSS</li>
+                                <li class="skill-item badge  px-3 py-2">RESTful APIs</li>
+                                <li class="skill-item badge  px-3 py-2">Role-Based Authentication</li>
+                                <li class="skill-item badge   px-3 py-2">Inventory Management</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-                <div class="carousel-item">
-                    <img src="Screenshot (564).png" alt="Project Image 3" class="d-block w-100 rounded-t-lg">
-                </div>
-                <div class="carousel-item">
-                    <img src="Screenshot (565).png" alt="Project Image 4" class="d-block w-100 rounded-t-lg">
-                </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselContent5" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselContent5" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div>
-
-        <div class="card-body text-center">
-            <h5 class="card-title text-2xl font-semibold mb-3">
-                <i class="fa-solid fa-check-circle text-purple-600"></i> 
-                E-Library - Laravel-Based Digital Library
-            </h5>
-            <div id="infoContent5" style="display: none;">
-               <p class="card-text mb-4 toggleBtn5">
-    The <strong>E-Library – Laravel-Based Digital Library</strong> is a <strong>feature-rich</strong> system built with <strong>Laravel 11, Bootstrap, and Tailwind CSS</strong>, offering a seamless reading experience with structured book and chapter management.
-    <ul>
-        <li><strong>Admins</strong>: Manage books and chapters, update metadata, and control user access.</li>
-        <li><strong>Users</strong>: Browse books, search by title or author, and read content with a smooth navigation experience.</li>
-    </ul>
-    The system features <strong>efficient CRUD operations</strong>, <strong>pagination for optimized performance</strong>, and <strong>database seeding</strong> to preload sample books for quick testing.
-</p>
-
-            </div>
-
-            <!-- Buttons -->
-            <div class="d-flex flex-column gap-2">
-                <button id="toggleBtn5" class="btn btn-secondary bg-gray-700 hover:bg-gray-800 text-white rounded-full shadow-md px-6 py-2 w-100">
-                    Description
-                </button>
-                <a href="https://vimeo.com/1063828686/56b1235e53?ts=0&share=copy" class="btn btn-primary bg-blue-600 hover:bg-blue-700 text-white rounded-full shadow-md px-6 py-2 w-100">
-                    Watch Video
-                </a>
-                <button class="btn btn-info w-100 mt-3" data-bs-toggle="modal" data-bs-target="#skillsModal5">
-                    See Skills
-                </button>
-            </div>
-
-            <!-- View Count and Like Button -->
-            <div class="view-count d-flex justify-content-center align-items-center mt-3 gap-3">
-                <span id="viewCount5">Views: 0</span>
-                <button id="accountLikeBtn5" class="btn btn-outline-warning" onclick="likeAccount5()">Like</button>
-                <span id="likeCount5">Likes: 0</span>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Skills Modal -->
-<div class="modal fade" id="skillsModal5" tabindex="-1" aria-labelledby="skillsModalLabel5" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="skillsModalLabel4">Skills</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <h5 class="mb-3">Tech Stack & Key Features</h5>
-                <ul class="list-unstyled d-flex flex-wrap gap-3 justify-content-start">
-                    <li class="skill-item badge  px-3 py-2">Laravel (Backend & Frontend)</li>
-        <li class="skill-item badge  px-3 py-2">MySQL</li>
-        <li class="skill-item badge  px-3 py-2">JavaScript</li>
-        <li class="skill-item badge  px-3 py-2">Tailwind CSS</li>
-        <li class="skill-item badge  px-3 py-2">RESTful APIs</li>
-        <li class="skill-item badge  px-3 py-2">Role-Based Authentication</li>
-        <li class="skill-item badge   px-3 py-2">Inventory Management</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</div>
 
 
             <!-- Project 6: Another Project -->
 
 
-      <!-- Project 6: Multi-Login Medical Management System -->
-<div class="col-lg-6 col-md-8 col-sm-10 mx-auto aos-init aos-animate" data-aos="fade-up" data-aos-duration="1000">
-    <div class="card shadow-lg bg-dark text-light project-card rounded-3d">
-        <!-- Carousel -->
-        <div id="carouselContent6" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="Screenshot (568).png" alt="Internship Projects" class="d-block w-100 rounded-t-lg">
-                </div>
-                <div class="carousel-item">
-                    <img src="Screenshot (569).png" alt="Project Image 2" class="d-block w-100 rounded-t-lg">
-                </div>
-                <div class="carousel-item">
-                    <img src="Screenshot (570).png" alt="Project Image 3" class="d-block w-100 rounded-t-lg">
-                </div>
-                <div class="carousel-item">
-                    <img src="Screenshot (571).png" alt="Project Image 4" class="d-block w-100 rounded-t-lg">
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselContent6" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselContent6" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div>
+            <!-- Project 6: Multi-Login Medical Management System -->
+            <div class="col-lg-6 col-md-8 col-sm-10 mx-auto aos-init aos-animate" data-aos="fade-up"
+                data-aos-duration="1000">
+                <div class="card shadow-lg bg-dark text-light project-card rounded-3d">
+                    <!-- Carousel -->
+                    <div id="carouselContent6" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="Screenshot (568).png" alt="Internship Projects"
+                                    class="d-block w-100 rounded-t-lg">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="Screenshot (569).png" alt="Project Image 2"
+                                    class="d-block w-100 rounded-t-lg">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="Screenshot (570).png" alt="Project Image 3"
+                                    class="d-block w-100 rounded-t-lg">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="Screenshot (571).png" alt="Project Image 4"
+                                    class="d-block w-100 rounded-t-lg">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselContent6"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselContent6"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
 
-        <div class="card-body text-center">
-            <h5 class="card-title text-2xl font-semibold mb-3">
-                <i class="fa-solid fa-check-circle text-purple-600"></i> SoundSphere
-            </h5>
-            <div id="infoContent6" style="display: none;">
-                <p class="card-text mb-4">
-                    The <strong>Music Management Website</strong> is a <strong>full-featured</strong> platform built entirely with <strong>Laravel 11</strong>. It allows users to <strong>upload, stream, and manage</strong> audio files directly from a web interface.
-                    <ul>
-                        <li><strong>Music Upload & Categorization</strong>: Users can upload songs and assign them to specific categories.</li>
-                        <li><strong>In-Browser Audio Streaming</strong>: Integrated audio player for seamless playback.</li>
-                        <li><strong>Song Management</strong>: Users can list, play, edit, or delete songs.</li>
-                        <li><strong>Backend API (Laravel 11)</strong>: Secure RESTful endpoints for file handling with validation.</li>
-                        <li><strong>Responsive Design</strong>: Mobile-friendly UI using Tailwind CSS.</li>
-                    </ul>
-                    The system ensures <strong>secure role-based access control</strong> and <strong>scalable performance</strong>, making it suitable for independent creators and online music platforms.
-                </p>
-                
-                
-            </div>
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-2xl font-semibold mb-3">
+                            <i class="fa-solid fa-check-circle text-purple-600"></i> SoundSphere
+                        </h5>
+                        <div id="infoContent6" style="display: none;">
+                            <p class="card-text mb-4">
+                                The <strong>Music Management Website</strong> is a <strong>full-featured</strong>
+                                platform built entirely with <strong>Laravel 11</strong>. It allows users to
+                                <strong>upload, stream, and manage</strong> audio files directly from a web interface.
+                            <ul>
+                                <li><strong>Music Upload & Categorization</strong>: Users can upload songs and assign
+                                    them to specific categories.</li>
+                                <li><strong>In-Browser Audio Streaming</strong>: Integrated audio player for seamless
+                                    playback.</li>
+                                <li><strong>Song Management</strong>: Users can list, play, edit, or delete songs.</li>
+                                <li><strong>Backend API (Laravel 11)</strong>: Secure RESTful endpoints for file
+                                    handling with validation.</li>
+                                <li><strong>Responsive Design</strong>: Mobile-friendly UI using Tailwind CSS.</li>
+                            </ul>
+                            The system ensures <strong>secure role-based access control</strong> and <strong>scalable
+                                performance</strong>, making it suitable for independent creators and online music
+                            platforms.
+                            </p>
 
-            <!-- Buttons with Full Width on Small Screens -->
-            <div class="d-flex flex-column gap-2">
-                <button id="toggleBtn6" class="btn btn-secondary bg-gray-700 hover:bg-gray-800 text-white rounded-full shadow-md px-6 py-2 w-100">
-                    Description
-                </button>
-                <a href="https://vimeo.com/1068442033/c6bf78d2f6?ts=0&share=copy" class="btn btn-primary bg-blue-600 hover:bg-blue-700 text-white rounded-full shadow-md px-6 py-2 w-100">
-                    Watch Video
-                </a>
-                <button class="btn btn-info w-100 mt-3" data-bs-toggle="modal" data-bs-target="#skillsModal6">
-                    See Skills
-                </button>
-            </div>
 
-            <!-- View Count with Icon and Account Like Button -->
-            <div class="view-count d-flex justify-content-center align-items-center mt-3 gap-3">
-                <span id="viewCount6">Views: 0</span> <!-- This will show the view count -->
-                <button id="accountLikeBtn6" class="btn btn-outline-warning" onclick="likeAccount6()">Like</button> <!-- This is the like button -->
-                <span id="likeCount6">Likes: 0</span> <!-- This will show the like count -->
+                        </div>
+
+                        <!-- Buttons with Full Width on Small Screens -->
+                        <div class="d-flex flex-column gap-2">
+                            <button id="toggleBtn6"
+                                class="btn btn-secondary bg-gray-700 hover:bg-gray-800 text-white rounded-full shadow-md px-6 py-2 w-100">
+                                Description
+                            </button>
+                            <a href="https://vimeo.com/1068442033/c6bf78d2f6?ts=0&share=copy"
+                                class="btn btn-primary bg-blue-600 hover:bg-blue-700 text-white rounded-full shadow-md px-6 py-2 w-100">
+                                Watch Video
+                            </a>
+                            <button class="btn btn-info w-100 mt-3" data-bs-toggle="modal"
+                                data-bs-target="#skillsModal6">
+                                See Skills
+                            </button>
+                        </div>
+
+                        <!-- View Count with Icon and Account Like Button -->
+                        <div class="view-count d-flex justify-content-center align-items-center mt-3 gap-3">
+                            <span id="viewCount6">Views: 0</span> <!-- This will show the view count -->
+                            <button id="accountLikeBtn6" class="btn btn-outline-warning"
+                                onclick="likeAccount6()">Like</button> <!-- This is the like button -->
+                            <span id="likeCount6">Likes: 0</span> <!-- This will show the like count -->
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
-</div>
 
             <!-- Skills Modal -->
             <div class="modal fade" id="skillsModal6" tabindex="-1" aria-labelledby="skillsModalLabel4"
@@ -988,9 +1095,9 @@ E-Library - Laravel-Based Digital Library -->
                         </div>
                     </div>
                 </div>
-     
-     
-     
+
+
+
             </div>
 
 
@@ -1046,41 +1153,45 @@ E-Library - Laravel-Based Digital Library -->
 
 
 
-   <!-- certifiacton -->
+    <!-- certifiacton -->
 
-   <section id="certifications" class="container py-5">
-    <h2 class="mt-5 pt-5 aos-init aos-animate my-5" data-aos="zoom-in" data-aos-duration="1500">Certifications →</h2>
-    <div class="row justify-content-center mt-4">
-        <div class="col-lg-8 col-md-10">
-            <div class="card certification-card aos-init aos-animate text-center" data-aos="fade-up" data-aos-duration="1200">
-                <div class="card-body">
-                    <h4 class="card-title certification-title">Professional Certifications</h4>
-                    <p class="card-text">Completed various industry-recognized certifications.</p>
+    <section id="certifications" class="container py-5">
+        <h2 class="mt-5 pt-5 aos-init aos-animate my-5" data-aos="zoom-in" data-aos-duration="1500">Certifications →
+        </h2>
+        <div class="row justify-content-center mt-4">
+            <div class="col-lg-8 col-md-10">
+                <div class="card certification-card aos-init aos-animate text-center" data-aos="fade-up"
+                    data-aos-duration="1200">
+                    <div class="card-body">
+                        <h4 class="card-title certification-title">Professional Certifications</h4>
+                        <p class="card-text">Completed various industry-recognized certifications.</p>
 
-                    <!-- Button to Show Certificate PDF -->
-                    <button class="btn research-btn mt-3" data-bs-toggle="modal" data-bs-target="#certificateModal">
-                        View Certificate
-                    </button>
+                        <!-- Button to Show Certificate PDF -->
+                        <button class="btn research-btn mt-3" data-bs-toggle="modal" data-bs-target="#certificateModal">
+                            View Certificate
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal for Viewing Certificate -->
+    <div class="modal fade" id="certificateModal" tabindex="-1" aria-labelledby="certificateModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="certificateModalLabel">Certification Document</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe src="https://drive.google.com/file/d/1yVCjSpSH2Nd3QGddQurAfVDvpqXo9ZFk/preview" width="100%"
+                        height="500px"></iframe>
                 </div>
             </div>
         </div>
     </div>
-</section>
-
-<!-- Modal for Viewing Certificate -->
-<div class="modal fade" id="certificateModal" tabindex="-1" aria-labelledby="certificateModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="certificateModalLabel">Certification Document</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <iframe src="https://drive.google.com/file/d/1yVCjSpSH2Nd3QGddQurAfVDvpqXo9ZFk/preview" width="100%" height="500px"></iframe>
-            </div>
-        </div>
-    </div>
-</div>
 
 
 
@@ -1144,7 +1255,7 @@ E-Library - Laravel-Based Digital Library -->
 
 
 
-    
+
     <!-- Footer Section -->
     <footer class="text-center text-white py-4 bg-dark">
         <div class="container">

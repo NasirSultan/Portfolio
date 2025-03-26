@@ -400,3 +400,23 @@ function likeAccount6() {
 // Automatically increment the view count when the page is loaded
 updateViewCount6();
 updateLikeCount6();
+function animatePercentage(card) {
+    let percentageElement = card.querySelector(".percentage");
+    let progressBar = card.querySelector(".progress-bar");
+    let targetPercentage = 70; // Set your desired percentage
+    let currentPercentage = 0;
+    let totalLength = 251.2; // Circle circumference
+
+    let interval = setInterval(() => {
+        if (currentPercentage >= targetPercentage) {
+            clearInterval(interval);
+        } else {
+            currentPercentage++;
+            percentageElement.textContent = currentPercentage + "%";
+
+            // Calculate stroke offset for progress animation
+            let offset = totalLength - (totalLength * currentPercentage) / 100;
+            progressBar.style.strokeDashoffset = offset;
+        }
+    }, 20); // Adjust speed of animation
+}
