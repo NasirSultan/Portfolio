@@ -423,3 +423,16 @@ function animatePercentage(card) {
 
 
 
+document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById("githubLsink").addEventListener("click", function (event) {
+        const url = this.getAttribute("href"); // Get href as written in HTML
+        const ipRegex = /^(https?:\/\/)?(\d{1,3}\.){3}\d{1,3}(:\d+)?(\/.*)?$/; // Matches IPv4 addresses
+
+        console.log("URL:", url); // Debugging: Check the actual href value
+
+        if (!url || url === "#" || ipRegex.test(url)) {
+            event.preventDefault(); // Prevent redirection
+            alert("Sorry, No GitHub link available!"); // Show alert message
+        }
+    });
+});
