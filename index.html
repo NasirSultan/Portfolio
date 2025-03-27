@@ -105,7 +105,7 @@
                 </div>
             </div>
             <!-- Image and Social Icons Section -->
-            <div class="d-flex align-items-center justify-content-center social-container">
+            <div class="d-flex align-items-center justify-content-center social-container ">
                 <!-- Social Icons -->
                 <a href="https://www.linkedin.com/in/nasir-sultan-848762282/" target="_blank" class="social-icon">
                     <i class="fab fa-linkedin"></i>
@@ -461,28 +461,36 @@
 
                         </div>
                         <div class="d-flex flex-column gap-2">
-                            <button id="toggleBtn1"
-                                class="btn btn-secondary bg-gray-700 hover:bg-gray-800 text-white rounded-full shadow-md px-6 py-2 w-100">
-                                Description
-                            </button>
-                            <a href="#" class="btn btn-primary w-100 text-center">
-                                NO Video Availble
-                            </a>
-                            <!-- Button to open the skills modal -->
-                            <button class="btn btn-info w-100 mt-3" data-bs-toggle="modal"
-                                data-bs-target="#skillsModal">
-                                See Skills
-                            </button>
+                            <div class="d-flex flex-column gap-2">
+                                <button id="toggleBtn1"
+                                    class="btn btn-secondary bg-gray-700 hover:bg-gray-800 text-white rounded-full shadow-md px-6 py-2 w-100">
+                                    Description
+                                </button>
+
+                                <!-- Flex container for NO Video Available & See Skills buttons -->
+                                <div class="d-flex gap-2 justify-content-center">
+                                    <a href="#"
+                                        class="btn btn-primary bg-blue-600 hover:bg-blue-700 text-white rounded-full shadow-md px-6 py-2 w-50 text-center">
+                                        No Video Available
+                                    </a>
+                                    <button class="btn btn-info w-50" data-bs-toggle="modal"
+                                        data-bs-target="#skillsModal">
+                                        See Skills
+                                    </button>
+                                </div>
+
+                            </div>
+
                             <!-- View Count with Icon and Account Like Button -->
                             <div class="view-count d-flex justify-content-center align-items-center mt-3 gap-3">
                                 <span id="viewCount">Views: 0</span> <!-- This will show the view count -->
-                                <button id="accountLikeBtn" class="color"
-                                    onclick="likeAccount()">Like</button> <!-- This is the like button -->
+                                <button id="accountLikeBtn" class="color" onclick="likeAccount()">Like</button>
+                                <!-- This is the like button -->
                                 <span id="likeCount">Likes: 0</span>
 
 
                                 <span> <a href="https://github.com/yourprofile" target="_blank" class="github-btn">
-                                        <i class="fa-brands fa-github"></i> 
+                                        <i class="fa-brands fa-github"></i>
                                     </a>
                                 </span><!-- This will show the like count -->
                             </div>
@@ -597,26 +605,29 @@
                                 class="btn btn-secondary bg-gray-700 hover:bg-gray-800 text-white rounded-full shadow-md px-6 py-2 w-100">
                                 Description
                             </button>
-                            <a href="https://vimeo.com/1047108469/c45d0ca6d6?share=copy"
-                                class="btn btn-primary bg-blue-600 hover:bg-blue-700 text-white rounded-full shadow-md px-6 py-2 w-100">
-                                Watch Video
-                            </a>
-                            <button class="btn btn-info w-100 mt-3" data-bs-toggle="modal"
-                                data-bs-target="#skillsModal2">
-                                See Skills
-                            </button>
+
+                            <div class="d-flex gap-2 justify-content-center mt-2">
+                                <a href="https://vimeo.com/1047108469/c45d0ca6d6?share=copy"
+                                    class="btn btn-primary bg-blue-600 hover:bg-blue-700 text-white rounded-full shadow-md px-6 py-2 w-50 text-center">
+                                    Watch Video
+                                </a>
+                                <button class="btn btn-info w-50" data-bs-toggle="modal" data-bs-target="#skillsModal2">
+                                    See Skills
+                                </button>
+                            </div>
+
                         </div>
 
                         <!-- View Count and Like Button for Project 2 -->
                         <div class="view-count d-flex justify-content-center align-items-center mt-3 gap-3">
                             <span id="viewCount2">Views: 0</span> <!-- Project 2 View Count -->
-                            <button  id="accountLikeBtn2"  class="color"
-                                onclick="likeAccount2()">Like</button> <!-- Like Button -->
+                            <button id="accountLikeBtn2" class="color" onclick="likeAccount2()">Like</button>
+                            <!-- Like Button -->
                             <span id="likeCount2">Likes: 0</span> <!-- Project 2 Like Count -->
                             <span> <a href="https://github.com/yourprofile" target="_blank" class="github-btn">
-                                <i class="fa-brands fa-github"></i> 
-                            </a>
-                        </span>
+                                    <i class="fa-brands fa-github"></i>
+                                </a>
+                            </span>
                         </div>
                     </div>
                 </div>
@@ -704,29 +715,31 @@
                         <!-- Buttons with Full Width on Small Screens -->
                         <div class="d-flex flex-column gap-2">
                             <button id="toggleBtn3"
-                                class="btn btn-secondary bg-gray-700 hover:bg-gray-800 text-white rounded-full shadow-md px-6 py-2 w-100">
-                                Description
-                            </button>
-                            <a href=""
-                                class="btn btn-primary bg-blue-600 hover:bg-blue-700 text-white rounded-full shadow-md px-6 py-2 w-100">
-                                No Video Availble
+                            class="btn btn-secondary bg-gray-700 hover:bg-gray-800 text-white rounded-full shadow-md px-6 py-2 w-100">
+                            Description
+                        </button>
+                        
+                        <div class="d-flex gap-2 justify-content-center mt-2">
+                            <a href="#" class="btn btn-primary bg-blue-600 hover:bg-blue-700 text-white rounded-full shadow-md px-6 py-2 w-50 text-center">
+                                No Video Available
                             </a>
-                            <button class="btn btn-info w-100 mt-3" data-bs-toggle="modal"
-                                data-bs-target="#skillsModal3">
+                            <button class="btn btn-info w-50" data-bs-toggle="modal" data-bs-target="#skillsModal3">
                                 See Skills
                             </button>
+                        </div>
+                        
                         </div>
 
                         <!-- View Count with Icon and Account Like Button -->
                         <div class="view-count d-flex justify-content-center align-items-center mt-3 gap-3">
                             <span id="viewCount3">Views: 0</span> <!-- This will show the view count -->
-                            <button id="accountLikeBtn3"   class="color"                         
-                                onclick="likeAccount3()">Like</button> <!-- This is the like button -->
+                            <button id="accountLikeBtn3" class="color" onclick="likeAccount3()">Like</button>
+                            <!-- This is the like button -->
                             <span id="likeCount3">Likes: 0</span> <!-- This will show the like count -->
 
                             <span> <a href="https://github.com/yourprofile" target="_blank" class="github-btn">
-                                <i class="fa-brands fa-github"></i> 
-                            </a>
+                                    <i class="fa-brands fa-github"></i>
+                                </a>
                         </div>
                     </div>
                 </div>
@@ -821,28 +834,31 @@
                         <!-- Buttons with Full Width on Small Screens -->
                         <div class="d-flex flex-column gap-2">
                             <button id="toggleBtn4"
-                                class="btn btn-secondary bg-gray-700 hover:bg-gray-800 text-white rounded-full shadow-md px-6 py-2 w-100">
-                                Description
-                            </button>
-                            <a href="https://vimeo.com/1057110770?share=copy#t=0"
-                                class="btn btn-primary bg-blue-600 hover:bg-blue-700 text-white rounded-full shadow-md px-6 py-2 w-100">
-                                Watch Video
-                            </a>
-                            <button class="btn btn-info w-100 mt-3" data-bs-toggle="modal"
-                                data-bs-target="#skillsModal4">
-                                See Skills
-                            </button>
+    class="btn btn-secondary bg-gray-700 hover:bg-gray-800 text-white rounded-full shadow-md px-6 py-2 w-100">
+    Description
+</button>
+
+<div class="d-flex gap-2 justify-content-center mt-2">
+    <a href="https://vimeo.com/1057110770?share=copy#t=0"
+        class="btn btn-primary bg-blue-600 hover:bg-blue-700 text-white rounded-full shadow-md px-6 py-2 w-50 text-center">
+        Watch Video
+    </a>
+    <button class="btn btn-info w-50" data-bs-toggle="modal" data-bs-target="#skillsModal4">
+        See Skills
+    </button>
+</div>
+
                         </div>
 
                         <!-- View Count with Icon and Account Like Button -->
                         <div class="view-count d-flex justify-content-center align-items-center mt-3 gap-3">
                             <span id="viewCount4">Views: 0</span> <!-- This will show the view count -->
-                            <button id="accountLikeBtn4" class="color"
-                                onclick="likeAccount4()">Like</button> <!-- This is the like button -->
+                            <button id="accountLikeBtn4" class="color" onclick="likeAccount4()">Like</button>
+                            <!-- This is the like button -->
                             <span id="likeCount4">Likes: 0</span> <!-- This will show the like count -->
                             <span> <a href="https://github.com/yourprofile" target="_blank" class="github-btn">
-                                <i class="fa-brands fa-github"></i> 
-                            </a>
+                                    <i class="fa-brands fa-github"></i>
+                                </a>
                         </div>
                     </div>
                 </div>
@@ -940,29 +956,31 @@ E-Library - Laravel-Based Digital Library -->
                         <!-- Buttons -->
                         <div class="d-flex flex-column gap-2">
                             <button id="toggleBtn5"
-                                class="btn btn-secondary bg-gray-700 hover:bg-gray-800 text-white rounded-full shadow-md px-6 py-2 w-100">
-                                Description
-                            </button>
+                            class="btn btn-secondary bg-gray-700 hover:bg-gray-800 text-white rounded-full shadow-md px-6 py-2 w-100">
+                            Description
+                        </button>
+                        
+                        <div class="d-flex gap-2 justify-content-center mt-2">
                             <a href="https://vimeo.com/1063828686/56b1235e53?ts=0&share=copy"
-                                class="btn btn-primary bg-blue-600 hover:bg-blue-700 text-white rounded-full shadow-md px-6 py-2 w-100">
+                                class="btn btn-primary bg-blue-600 hover:bg-blue-700 text-white rounded-full shadow-md px-6 py-2 w-50 text-center">
                                 Watch Video
                             </a>
-                            <button class="btn btn-info w-100 mt-3" data-bs-toggle="modal"
-                                data-bs-target="#skillsModal5">
+                            <button class="btn btn-info w-50" data-bs-toggle="modal" data-bs-target="#skillsModal5">
                                 See Skills
                             </button>
+                        </div>
+                        
                         </div>
 
                         <!-- View Count and Like Button -->
                         <div class="view-count d-flex justify-content-center align-items-center mt-3 gap-3">
                             <span id="viewCount5">Views: 0</span>
-                            <button id="accountLikeBtn5" class="color"
-                                onclick="likeAccount5()">Like</button>
+                            <button id="accountLikeBtn5" class="color" onclick="likeAccount5()">Like</button>
                             <span id="likeCount5">Likes: 0</span>
                             <span> <a href="https://github.com/yourprofile" target="_blank" class="github-btn">
-                                <i class="fa-brands fa-github"></i> 
-                            </a>
-                        </span><!-- This will show the like count -->
+                                    <i class="fa-brands fa-github"></i>
+                                </a>
+                            </span><!-- This will show the like count -->
                         </div>
                     </div>
                 </div>
@@ -1063,29 +1081,32 @@ E-Library - Laravel-Based Digital Library -->
                         <!-- Buttons with Full Width on Small Screens -->
                         <div class="d-flex flex-column gap-2">
                             <button id="toggleBtn6"
-                                class="btn btn-secondary bg-gray-700 hover:bg-gray-800 text-white rounded-full shadow-md px-6 py-2 w-100">
-                                Description
-                            </button>
+                            class="btn btn-secondary bg-gray-700 hover:bg-gray-800 text-white rounded-full shadow-md px-6 py-2 w-100">
+                            Description
+                        </button>
+                        
+                        <div class="d-flex gap-2 justify-content-center mt-2">
                             <a href="https://vimeo.com/1068442033/c6bf78d2f6?ts=0&share=copy"
-                                class="btn btn-primary bg-blue-600 hover:bg-blue-700 text-white rounded-full shadow-md px-6 py-2 w-100">
+                                class="btn btn-primary bg-blue-600 hover:bg-blue-700 text-white rounded-full shadow-md px-6 py-2 w-50 text-center">
                                 Watch Video
                             </a>
-                            <button class="btn btn-info w-100 mt-3" data-bs-toggle="modal"
-                                data-bs-target="#skillsModal6">
+                            <button class="btn btn-info w-50" data-bs-toggle="modal" data-bs-target="#skillsModal6">
                                 See Skills
                             </button>
+                        </div>
+                        
                         </div>
 
                         <!-- View Count with Icon and Account Like Button -->
                         <div class="view-count d-flex justify-content-center align-items-center mt-3 gap-3">
                             <span id="viewCount6">Views: 0</span> <!-- This will show the view count -->
-                            <button id="accountLikeBtn6" class="color"
-                                onclick="likeAccount6()">Like</button> <!-- This is the like button -->
+                            <button id="accountLikeBtn6" class="color" onclick="likeAccount6()">Like</button>
+                            <!-- This is the like button -->
                             <span id="likeCount6">Likes: 0</span> <!-- This will show the like count -->
                             <span> <a href="https://github.com/yourprofile" target="_blank" class="github-btn">
-                                <i class="fa-brands fa-github"></i> 
-                            </a>
-                        </span><!-- This will show the like count -->
+                                    <i class="fa-brands fa-github"></i>
+                                </a>
+                            </span><!-- This will show the like count -->
                         </div>
                     </div>
                 </div>
