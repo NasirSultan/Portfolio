@@ -15,6 +15,7 @@ body {
     font-family: 'Arial', sans-serif;
     font-size: 0.75rem; /* Smaller font size for navbar */
     letter-spacing: 0.5px;
+   
 }
 
 .navbar-brand {
@@ -30,13 +31,24 @@ body {
 }
 
 /* Nav Links */
-.nav-item.nav-link {
+.navbar-nav {
+    display: flex; /* Ensure items are in one row */
+    flex-wrap: nowrap; /* Prevent wrapping */
+    align-items: center; /* Align vertically */
+}
+
+.nav-item {
+    white-space: nowrap; /* Prevent text from breaking */
+}
+
+.nav-item .nav-link {
     color: #f8f9fa;
     margin-right: 15px;
     font-size: 0.75rem; /* Smaller font size for links */
     text-transform: uppercase;
     transition: color 0.3s ease, transform 0.3s ease;
 }
+
 
 .nav-item.nav-link:hover {
     color: #ffc107; /* Yellow color on hover */
@@ -767,7 +779,7 @@ body {
 }
 
 /* Apply styles for screens 375px and below */
-@media (max-width: 450px) {
+@media (max-width: 600px) {
     #profile-pic {
         margin-bottom: 10px;
     }
@@ -869,3 +881,15 @@ color: rgb(219, 217, 217);
     background-color: #201f1f;
 }
 
+.visible {
+    opacity: 44;
+    visibility: visible;
+  
+}
+
+
+.navbar-nav {
+    display: flex;
+    flex-direction: row; /* Ensures links are in one row */
+    flex-wrap: nowrap; /* Prevents links from wrapping */
+}
