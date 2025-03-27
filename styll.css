@@ -784,8 +784,8 @@ body {
 }
 
 .github-btn i {
-    font-size: 1.1rem;
-    margin-left: 10px;
+    font-size: 1.2rem;
+    margin-left: 11px;
 }
 
 /* Hover effect */
@@ -830,4 +830,41 @@ html, body {
     margin: 0;
     padding: 0;
     width: 100%;
+}
+
+
+
+.color {
+    height: 25px;
+    font-size: 18px;
+    transition: all 0.3s ease-in-out;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 15px;
+    background: none; /* No background */
+    border: 1px solid transparent; /* Hide border initially */
+    color: rgb(199, 147, 3); /* Default text color */
+    border-radius: 5px;
+}
+
+/* Hover effect with smooth transition */
+.color:hover {
+    background-color: rgb(6, 14, 119) !important;
+    color: white !important;
+    font-size: 14px; /* Slightly decrease text size */
+    border-radius: 10px;
+    transform: scale(1.1); /* Slight zoom effect */
+}
+
+/* Add active effect for clicking */
+#accountLikeBtn:active {
+    transform: scale(0.95);
+   
+}
+
+.modal-content{
+color: rgb(219, 217, 217);
+    background-color: #201f1f;
 }
