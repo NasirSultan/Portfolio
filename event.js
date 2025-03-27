@@ -420,3 +420,6 @@ function animatePercentage(card) {
         }
     }, 20); // Adjust speed of animation
 }
+
+
+
