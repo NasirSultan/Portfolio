@@ -970,7 +970,7 @@ color: rgb(219, 217, 217);
 /* For devices up to 770px wide (tablets and large phones) */
 @media (max-width: 770px) {
   .hero-title {
-    font-size: 4.5rem;
+    font-size: 4.6rem;
     line-height: 1.1;
     margin-top: 10px;
     margin-bottom: 10px;
