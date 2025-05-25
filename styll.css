@@ -1007,7 +1007,7 @@ color: rgb(219, 217, 217);
 /* For smaller devices up to 450px (phones) */
 @media (max-width: 540px) {
   .hero-title {
-    font-size: 3.5rem;
+    font-size: 3.1rem;
     margin-top: 0;
     margin-bottom: 0;
     line-height: 1.1;
