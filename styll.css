@@ -894,3 +894,114 @@ color: rgb(219, 217, 217);
     flex-wrap: nowrap; /* Prevents links from wrapping */
 }
 
+
+
+
+
+
+.hero-subtitle {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  color: #d8ae05;
+}
+
+.hero-title {
+  font-size: 7rem;
+  margin: 0;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.hero-role {
+  font-size: 3rem;
+  margin-top: 15px;
+  color: #fa6060;
+}
+
+/* Container for vertical stacking and centering */
+.hero-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px; /* Default padding */
+  /* min-height: 100vh; -- Removed */
+}
+
+.hero-headings {
+  display: inline-block;
+  text-align: left;
+  margin: 0 auto;
+}
+
+/* Button container */
+.hero-btn {
+  display: flex;
+  gap: 10px;
+  margin-top: 0;
+  justify-content: center;
+  padding: 0;
+}
+
+.hero-btn-primary,
+.hero-btn-secondary {
+  display: inline-block;
+  padding: 8px 30px;
+  font-size: 1.1rem;
+  text-decoration: none;
+  background-color: #b8ce0f;
+  color: rgb(0, 0, 0);
+  border-radius: 20px;
+  transition: background 0.3s ease;
+  border: none;
+}
+
+.hero-btn-primary:hover,
+.hero-btn-secondary:hover {
+  background-color: #2563EB;
+}
+
+.ml-2 {
+  margin-left: 15px;
+}
+
+/* Responsive font sizes, spacing, and padding adjustments */
+@media (max-width: 600px) {
+  .hero-title {
+    font-size: 2.8rem;
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 1.1;
+  }
+
+  .hero-subtitle {
+    font-size: 1.8rem;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .hero-role {
+    font-size: 1.4rem;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .hero-btn-primary,
+  .hero-btn-secondary {
+    font-size: 0.9rem;
+    padding-top: 0;
+    padding-bottom: 0;
+    line-height: 1.2;
+  }
+
+  .hero-btn {
+    margin-top: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .hero-container {
+    padding: 0; /* Remove padding on small screens */
+  }
+}
