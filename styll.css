@@ -1042,6 +1042,11 @@ color: rgb(219, 217, 217);
   .hero-container {
     padding: 5px 10px;
   }
+
+  .hero-role {
+
+  color: #56db09;
+}
 }
 
 
