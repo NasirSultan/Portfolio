@@ -967,7 +967,7 @@ color: rgb(219, 217, 217);
 }
 
 /* Responsive font sizes, spacing, and padding adjustments */
-@media (max-width: 600px) {
+@media (max-width: 450px) {
   .hero-title {
     font-size: 3.8rem;
     margin-top: 0;
