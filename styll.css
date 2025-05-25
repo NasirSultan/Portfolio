@@ -1059,3 +1059,279 @@ color: rgb(219, 217, 217);
 
 
 
+
+
+.timeline-container {
+  max-width: 700px;
+  margin: 3rem auto;
+  padding: 2rem;
+}
+
+.timeline {
+  position: relative;
+  border-left: 2px solid #444;
+  padding-left: 2rem;
+  list-style: none;
+}
+
+.timeline-item {
+  position: relative;
+  padding-left: 10px; /* space for icon */
+  margin-bottom: 30px;
+}
+
+.dot {
+  position: absolute;
+  left: -42px;
+  top: 5px;
+  height: 14px;
+  width: 14px;
+  background-color: #4ade80; /* green */
+  border: 2px solid #000;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.content time {
+  font-size: 1.1rem; /* increased from 0.875rem */
+  color: #aaa;
+}
+
+.content h3 {
+  margin: 0.25rem 0;
+  font-size: 1.6rem; /* increased from 1.2rem */
+  color: #fff;
+}
+
+.company {
+  font-size: 1.2rem; /* increased from 0.95rem */
+  color: #ccc;
+  margin-bottom: 0.25rem;
+}
+
+.content p {
+  margin: 0;
+  font-size: 1.1rem; /* increased from 0.95rem */
+  line-height: 1.5;
+  color: #bbb;
+}
+
+.experience-section {
+  padding: 60px 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 60px;
+}
+
+.experience-card {
+  display: flex;
+  align-items: center;
+  max-width: 400px;
+}
+
+.experience-card svg {
+  width: 70px;
+  height: 70px;
+  margin-right: 25px;
+  flex-shrink: 0;
+}
+
+.experience-text h2 {
+  font-size: 42px; /* increased from 36px */
+  font-weight: bold;
+  margin: 0;
+}
+
+.experience-text p {
+  margin: 12px 0 0;
+  font-size: 24px; /* increased from 20px */
+  color: #ccc;
+}
+
+.green-icon {
+  color: #00ff99;
+}
+
+.blue-icon {
+  color: #00bfff;
+}
+
+.yellow-icon {
+  color: #ffcc00;
+}
+
+.icon-circle {
+  position: absolute;
+  left: -45px;
+  top: -2px;
+  width: 22px;
+  height: 22px;
+  border: 2px solid #c0c0c0;
+  border-radius: 50%;
+  background-color: rgb(60, 23, 210);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.icon-circle svg {
+  width: 20px;
+  height: 16px;
+}
+
+
+
+
+ #scrollToTopBtn {
+    position: fixed;
+    bottom: 2.5rem;
+    right: 2rem;
+    z-index: 1000;
+    background-color: #3b82f6; /* Tailwind's primary-500 */
+    color: white;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    display: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+
+  #scrollToTopBtn:hover {
+    background-color: #2563eb; /* Tailwind's primary-600 */
+    transform: translateY(-2px);
+  }
+
+  #scrollToTopBtn svg {
+    display: block;
+    margin: auto;
+  }
+
+
+
+   #openModalBtn {
+      padding: 12px 48px; /* base size */
+      font-size: 18px;
+      cursor: pointer;
+      border: none;
+      border-radius: 6px;
+      background-color: rgb(216, 116, 22);
+      color: white;
+      transition: background-color 0.3s ease, padding 0.3s ease, font-size 0.3s ease;
+      margin-top: 60px;
+    }
+
+    #openModalBtn:hover {
+      background-color: #c38616;
+    }
+
+    /* Medium screens */
+ /* Base (mobile first) */
+#openModalBtn {
+  padding: 30px 90px;
+  font-size: 18px;
+}
+
+/* Medium screens (≥ 500px) */
+@media (min-width: 500px) {
+  #openModalBtn {
+    padding: 35px 170px;
+    font-size: 20px;
+  }
+}
+
+/* Large screens (≥ 780px) */
+@media (min-width: 780px) {
+  #openModalBtn {
+    padding: 40px 300px;
+    font-size: 22px;
+  }
+}
+
+/* Extra Large screens (≥ 1440px) */
+/* @media (min-width: 1440px) {
+  #openModalBtn {
+    padding: 18px 84px;
+    font-size: 24px;
+  } */
+/* } */
+.button-container {
+  width: 100%;
+  text-align: center;  /* Center content horizontally */
+   /* Optional: top spacing */
+}
+
+/* Keep your button styling */
+#openModalBtn {
+  padding: 30px 90px;
+  font-size: 18px;
+  cursor: pointer;
+  border: none;
+  border-radius: 6px;
+  background-color: rgb(216, 116, 22);
+  color: white;
+  transition: background-color 0.3s ease, padding 0.3s ease, font-size 0.3s ease;
+  display: inline-block; /* default button behavior */
+}
+
+
+    #openModalBtn:hover {
+      background-color: #c38616;
+    }
+
+    @media (min-width: 500px) {
+      #openModalBtn {
+        padding: 35px 170px;
+        font-size: 20px;
+      }
+    }
+
+    @media (min-width: 780px) {
+      #openModalBtn {
+        padding: 40px 300px;
+        font-size: 22px;
+      }
+    }
+
+    .skills-popup {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0; top: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(1px);
+      -webkit-backdrop-filter: blur(2px);
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    .skills-popup.show {
+      display: flex;
+    }
+
+    .skills-content {
+      background-color: rgba(0, 0, 0, 0.6);
+      border-radius: 10px;
+      padding: 20px;
+      max-width: 600px;
+      width: 100%;
+      box-shadow: none;
+      position: relative;
+      background: transparent;
+      text-align: center;
+    }
+
+    .about-description {
+      padding: 0;
+      color: white;
+      font-size: 1rem;
+      line-height: 1.6;
+      text-align: left;
+    }
+

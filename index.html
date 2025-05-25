@@ -89,7 +89,7 @@
     <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg navbar-dark  bg-black fixed-top">
         <div class="container">
-        
+
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#basic-navbar-nav"
                 aria-controls="basic-navbar-nav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -149,26 +149,158 @@
 
     <!-- Hero Section -->
     <div id="home" class="container pt-5 mt-5">
-       
- <div class="container mt-5 hero-container">
-      <div class="st-hero-headings hero-headings">
-        <h3 class="hero-subtitle">Hello, I’m</h3>
-        <h1 class="hero-title">Nasir Sultan</h1>
-        <h2 class="hero-role">Full Stack Developer</h2>
-      </div>
 
-      <div class="st-hero-btn hero-btn">
-        <a href="#contact" class="st-btn hero-btn-primary">Hire me</a>
-        <a href="/https://drive.google.com/file/d/193BwnSWL02i7YcxXgrFrWv18zlyncyQb/preview" class="st-btn hero-btn-secondary ml-2" download>Download CV</a>
-      </div>
-    </div>
+        <div class="container mt-5 hero-container">
+            <div class="st-hero-headings hero-headings">
+                <h3 class="hero-subtitle">Hello, I’m</h3>
+                <h1 class="hero-title">Nasir Sultan</h1>
+                <h2 class="hero-role">Full Stack Developer</h2>
+            </div>
+
+            <div class="st-hero-btn hero-btn">
+                <a href="#contact" class="st-btn hero-btn-primary">Hire me</a>
+                <a href="/https://drive.google.com/file/d/193BwnSWL02i7YcxXgrFrWv18zlyncyQb/preview"
+                    class="st-btn hero-btn-secondary ml-2" download>Download CV</a>
+            </div>
+        </div>
 
 
-
+        
     </div>
 
     <!-- About Me Section -->
     <!-- About Me Section -->
+    <div id="about" class="container py-5">
+        <h2 class="mt-5 pt-5 aos-init aos-animate" data-aos="zoom-in" data-aos-duration="1500">About Me →</h2>
+        <div class="experience-section">
+
+            <!-- Projects Completed -->
+            <div class="experience-card">
+                <div class="green-icon">
+                    <svg stroke="currentColor" fill="currentColor" viewBox="0 0 384 512"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M336 64h-80c0-35.3-28.7-64-64-64s-64 28.7-64 64H48C21.5 64 0 85.5 0 112v352c0 26.5 21.5 48 48 48h288c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48zM192 40c13.3 0 24 10.7 24 24s-10.7 24-24 24-24-10.7-24-24 10.7-24 24-24zm121.2 231.8l-143 141.8c-4.7 4.7-12.3 4.6-17-.1l-82.6-83.3c-4.7-4.7-4.6-12.3.1-17L99.1 285c4.7-4.7 12.3-4.6 17 .1l46 46.4 106-105.2c4.7-4.7 12.3-4.6 17 .1l28.2 28.4c4.7 4.8 4.6 12.3-.1 17z">
+                        </path>
+                    </svg>
+                </div>
+                <div class="experience-text">
+                    <h2 id="project-count">0</h2>
+                    <p>Projects Completed</p>
+                </div>
+                <script>
+                    function countUp(element, target, duration = 1400) {
+                        let start = 0;
+                        let increment = target / (duration / 50); // update every 50ms
+
+                        const interval = setInterval(() => {
+                            start += increment;
+                            if (start >= target) {
+                                element.textContent = target + "+"; // Final value with +
+                                clearInterval(interval);
+                            } else {
+                                element.textContent = Math.floor(start) + "+"; // Live update with +
+                            }
+                        }, 50);
+                    }
+
+                    function onEntry(entries, observer) {
+                        entries.forEach(entry => {
+                            if (entry.isIntersecting) {
+                                const element = entry.target.querySelector('#project-count');
+                                countUp(element, 7);
+                                observer.unobserve(entry.target);
+                            }
+                        });
+                    }
+
+                    const observer = new IntersectionObserver(onEntry, { threshold: 0.5 });
+                    const experienceText = document.querySelector('.experience-text');
+
+                    observer.observe(experienceText);
+                </script>
+
+
+            </div>
+
+            <!-- Years of Experience -->
+            <div class="experience-card">
+                <div class="blue-icon">
+                    <svg stroke="currentColor" fill="currentColor" viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M6 6V5a3 3 0 013-3h2a3 3 0 013 3v1h2a2 2 0 012 2v3.57A22.952 22.952 0 0110 13a22.95 22.95 0 01-8-1.43V8a2 2 0 012-2h2zm2-1a1 1 0 011-1h2a1 1 0 011 1v1H8V5zm1 5a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1z"
+                            clip-rule="evenodd"></path>
+                        <path
+                            d="M2 13.692V16a2 2 0 002 2h12a2 2 0 002-2v-2.308A24.974 24.974 0 0110 15c-2.796 0-5.487-.46-8-1.308z">
+                        </path>
+                    </svg>
+                </div>
+                <div class="experience-text">
+                    <h2>1+ </h2>
+                    <p>Year Experience</p>
+                </div>
+
+            </div>
+
+
+
+        </div>
+
+  <div class="button-container">
+  <button id="openModalBtn">More About Me</button>
+</div>
+
+
+  <div class="skills-popup" id="skillsModal" tabindex="-1" aria-hidden="true">
+    <div class="skills-content">
+      <p class="about-description" data-aos="fade-right" data-aos-duration="3000">
+        Hello! I'm <strong>Nasir Sultan</strong>, a <strong>Full Stack Web Developer</strong> with a passion
+        for crafting <strong>intelligent, high-performance web solutions</strong>.
+        <br><br>
+        Armed with expertise in <strong>Next.js, Laravel, Vue.js, and AI-driven technologies</strong>, I
+        specialize in building <strong>dynamic, scalable applications</strong> that seamlessly integrate
+        automation and real-time systems.
+        <br><br>
+        My focus is on <strong>blending innovation with user-centric design</strong>, ensuring intuitive
+        experiences across all devices. Whether it's developing cutting-edge platforms, optimizing
+        workflows, or leveraging AI to enhance functionality, I thrive on pushing boundaries and turning
+        ideas into reality.
+      </p>
+    </div>
+  </div>
+
+<script>
+  const modal = document.getElementById('skillsModal');
+  const openBtn = document.getElementById('openModalBtn');
+
+  // Show modal
+  openBtn.addEventListener('click', (e) => {
+    e.stopPropagation(); // prevent click from bubbling up
+    modal.classList.add('show');
+    modal.setAttribute('aria-hidden', 'false');
+  });
+
+  // Hide modal on any click inside or outside modal
+  modal.addEventListener('click', () => {
+    modal.classList.remove('show');
+    modal.setAttribute('aria-hidden', 'true');
+  });
+
+  // Close modal on ESC key
+  window.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.classList.contains('show')) {
+      modal.classList.remove('show');
+      modal.setAttribute('aria-hidden', 'true');
+    }
+  });
+</script>
+    </div>
+
+
+
+    <!-- About Me Section -->
+
     <div id="about" class="container py-5">
         <h2 class="mt-5 pt-5 aos-init aos-animate" data-aos="zoom-in" data-aos-duration="1500">About Me →</h2>
         <div class="row mt-4">
@@ -206,7 +338,7 @@
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            <iframe src="https://drive.google.com/file/d/193BwnSWL02i7YcxXgrFrWv18zlyncyQb/preview" 
+                            <iframe src="https://drive.google.com/file/d/193BwnSWL02i7YcxXgrFrWv18zlyncyQb/preview"
                                 width="100%" height="500px" style="border: none;"></iframe>
                         </div>
                         <div class="modal-footer">
@@ -225,9 +357,15 @@
 
 
 
+ <!-- experice Me Section -->
+<section id="experice" class="container py-5">
+   <h2 class="mt-5 pt-5 aos-init aos-animate" data-aos="zoom-in" data-aos-duration="1500">experice Me →</h2>
 
-    <!-- 🎓 Education Section -->
-    <!-- 🎓 Education Section -->
+
+</section>
+
+
+
     <section id="education" class="container py-5">
         <h2 class="mt-5 pt-5 aos-init aos-animate my-5" data-aos="zoom-in" data-aos-duration="1500">Education →</h2>
         <div class="row justify-content-center mt-4">
@@ -240,8 +378,8 @@
                         <p class="university"><strong>UMT</strong> | 2024</p>
 
                         <!-- 🔘 Button to Show Final Year Research PDF -->
-                        <button class="btn research-btn mt-3 rounded-4" data-bs-toggle="modal" data-bs-target="#researchModal"
-                            data-aos="flip-left" data-aos-duration="3000">
+                        <button class="btn research-btn mt-3 rounded-4" data-bs-toggle="modal"
+                            data-bs-target="#researchModal" data-aos="flip-left" data-aos-duration="3000">
                             View Final Year Research
                         </button>
                     </div>
@@ -448,7 +586,7 @@
                     </div>
                     <div class="card-body">
                         <h5 class="card-title text-2xl font-semibold mb-3">
-                            <i class="fa-solid fa-briefcase "  style="color: #bcbe28;"></i> Internship Projects
+                            <i class="fa-solid fa-briefcase " style="color: #bcbe28;"></i> Internship Projects
                         </h5>
                         <div id="infoContent1" style="display: none;">
                             <p class="card-text mb-4">
@@ -517,7 +655,7 @@
                             <li class="skill-item">Node.js</li>
                             <li class="skill-item">Express.js</li>
                             <li class="skill-item">MySQL</li>
-                        
+
                             <li class="skill-item">JavaScript</li>
                             <li class="skill-item">RESTful APIs</li>
                             <li class="skill-item">Bootstrap</li>
@@ -1202,8 +1340,8 @@ E-Library - Laravel-Based Digital Library -->
                         <p class="card-text">Completed various industry-recognized certifications.</p>
 
                         <!-- Button to Show Certificate PDF -->
-                        <button class="btn research-btn mt-3  rounded-4" data-bs-toggle="modal" data-bs-target="#certificateModal"
-                            data-aos="flip-left" data-aos-duration="3000">
+                        <button class="btn research-btn mt-3  rounded-4" data-bs-toggle="modal"
+                            data-bs-target="#certificateModal" data-aos="flip-left" data-aos-duration="3000">
                             View Certificate
                         </button>
                     </div>
@@ -1219,7 +1357,8 @@ E-Library - Laravel-Based Digital Library -->
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="certificateModalLabel">Certification Document</h5>
-                    <button type="button" class="btn-close rounded-4" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <button type="button" class="btn-close rounded-4" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <iframe src="https://drive.google.com/file/d/1yVCjSpSH2Nd3QGddQurAfVDvpqXo9ZFk/preview" width="100%"
