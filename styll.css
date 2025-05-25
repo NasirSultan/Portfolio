@@ -947,7 +947,7 @@ color: rgb(219, 217, 217);
 .hero-btn-primary,
 .hero-btn-secondary {
   display: inline-block;
-  padding: 20px 50px;
+  padding: 15px 50px;
   font-size: 1.1rem;
   text-decoration: none;
   background-color: #b8ce0f;
@@ -993,6 +993,7 @@ color: rgb(219, 217, 217);
     padding-top: 0;
     padding-bottom: 0;
     line-height: 1.2;
+      padding: 10px 50px;
   }
 
   .hero-btn {
